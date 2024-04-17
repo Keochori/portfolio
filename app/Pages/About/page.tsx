@@ -10,14 +10,20 @@ export default function About() {
 
         {/* Text box */}
         <div className=" w-[300px] h-[300px]">
-            <p className=" font-mono text-slate-400 text-xl">
+            <p className="font-josefin text-slate-400 text-xl">
                 Hi! My name is Mateusz Salaga and I am a 22 year old video game
                 programmer from sweden.
             </p>
+
+            <p className="font-josefin text-slate-400 text-xl">
+              Feel free to check out my work!
+            </p>
+
+            
         </div>
 
         {/* Image box */}
-        <div className="px-12 grayscale">
+        <div className="px-10 grayscale">
             <Image
             src={Portrait}
             width={200}
