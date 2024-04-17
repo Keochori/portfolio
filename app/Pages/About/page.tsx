@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 export default function About() {
   return (
-    <div className="flex justify-center justify-center">
+    <div className="flex justify-center">
       <div className="w-[600px] h-[260px] flex flex-wrap justify-center items-center">
 
         {/* Info Tab */}
@@ -64,10 +64,12 @@ export default function About() {
           {/* LinkedIn */}
           <div className="w-[250px] h-[60px] flex flex-wrap">
             <div className="w-full h-[30px] flex justify-center items-center">
-              <FaLinkedin className=" size-6 fill-[#d1c876]"/>
+              <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
+                <FaLinkedin className=" size-6 fill-[#d1c876] hover:fill-[#a39c5c]"/>
+              </Link>
             </div>
             <div className="w-full h-[30px] flex justify-center">
-              <Link className="text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all" href={'https://www.linkedin.com/in/mateuszsalaga/'}>
+              <Link className="text-decoration-line: underline text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all" href={'https://www.linkedin.com/in/mateuszsalaga/'}>
                 linkedin.com/in/mateuszsalaga
               </Link>
             </div>
@@ -80,7 +82,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                <p className="size-5 font-bold text-center text-[#d1c876]">
+                <p className="size-5 font-bold text-center text-[#d1c876] hover:text-[#a39c5c]">
                   CV
                 </p>
               </a>
@@ -90,10 +92,9 @@ export default function About() {
                 <a href="../cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-decoration-line: underline text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all"
                 >
-                  <p className="text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all">
                     Click Here!
-                  </p>
                 </a>
               </p>
             </div>
