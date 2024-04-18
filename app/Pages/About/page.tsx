@@ -38,7 +38,7 @@ function About() {
             </p>
             <div className="flex justify-center">
               <Link
-                className="transition-all font-josefin text-slate-300 text-xl border-2 border-slate-300 rounded-xl p-2 hover:text-[#979797] hover:border-[#979797]"
+                className="bg-[#131a25] transition-all font-josefin text-slate-300 text-xl border-2 border-[#1e293b] rounded-xl p-2 pl-8 pr-8 hover:text-black hover:bg-white hover:border-[#1e293b]"
                 href="../Pages/Projects"
               >
                 Projects
@@ -133,7 +133,7 @@ function AboutMobile() {
             />
         </div>
 
-        {/* Text Box */}
+        {/* Content */}
         <div className="w-full h-fit flex justify-center pt-5">
           <div className="w-11/12 h-fit">
             <p className="font-josefin text-slate-400 text-xl">
@@ -141,12 +141,13 @@ function AboutMobile() {
               programmer from sweden.
             </p>
 
+            {/* Projects Link */}
             <p className="font-josefin text-slate-400 text-xl pt-8 pb-3 text-center">
               Feel free to check out my work!
             </p>
             <div className="flex justify-center">
               <Link
-                className="transition-all font-josefin text-slate-300 text-xl border-2 border-slate-300 rounded-xl p-2 hover:text-[#979797] hover:border-[#979797]"
+                className="bg-[#131a25] transition-all font-josefin text-slate-300 text-xl border-2 border-[#1e293b] rounded-xl p-2 pl-8 pr-8 hover:text-black hover:bg-white hover:border-[#1e293b]"
                 href="../Pages/Projects"
               >
                 Projects
