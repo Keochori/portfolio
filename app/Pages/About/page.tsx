@@ -1,18 +1,30 @@
+"use client"
 import Image from "next/image";
 import Portrait from "@/app/Files/portrait.png";
 import Link from "next/link";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa6";
+import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
-export default function About() {
+export default function AboutPage() {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  if (isTabletOrMobile == true) {
+    return AboutMobile();
+  } else {
+    return About();
+  }
+}
+
+function About() {
   return (
     <div className="flex justify-center">
       <div className="w-[600px] h-[260px] flex flex-wrap justify-center items-center">
 
-        {/* Info Tab */}
+        {/* Text Box */}
         <div className="w-[600px] h-[260px] flex">
 
-          {/* Text box */}
+          {/* Content */}
           <div className=" w-[450px] h-[300px]">
             <p className="font-josefin text-slate-400 text-xl pl-3">
               Hi! My name is Mateusz Salaga and I am a 22 year old video game
@@ -20,7 +32,7 @@ export default function About() {
             </p>
 
 
-            {/* Projects Link Text */}
+            {/* Projects Link */}
             <p className="font-josefin text-slate-400 text-xl pt-8 pb-3 text-center">
               Feel free to check out my work!
             </p>
@@ -46,7 +58,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Other Tab */}
+        {/* Contacts Box */}
         <div className="w-[600px] h-[60px] flex">
 
           {/* Email */}
@@ -100,6 +112,104 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function AboutMobile() {
+  return (
+    <div className="w-full h-screen flex justify-center">
+      <div className="w-8/12 h-screen flex flex-col">
+
+        {/* Portrait */}
+        <div className="w-full h-fill">
+            <Image
+              className=" rounded-xl grayscale"
+              src={Portrait}
+              width={300}
+              height={300}
+              alt="Picture of the author"
+            />
+        </div>
+
+        {/* Text Box */}
+        <div className="w-full h-fit flex justify-center pt-5">
+          <div className="w-11/12 h-fit">
+            <p className="font-josefin text-slate-400 text-xl">
+              Hi! My name is Mateusz Salaga and I am a 22 year old video game
+              programmer from sweden.
+            </p>
+
+            <p className="font-josefin text-slate-400 text-xl pt-8 pb-3 text-center">
+              Feel free to check out my work!
+            </p>
+            <div className="flex justify-center">
+              <Link
+                className="transition-all font-josefin text-slate-300 text-xl border-2 border-slate-300 rounded-xl p-2 hover:text-[#979797] hover:border-[#979797]"
+                href="../Pages/Projects"
+              >
+                Projects
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Contacts Box */}
+        <div className="w-full h-full flex flex-wrap justify-center pt-5">
+          {/* Email */}
+          <div className="w-full h-fit p-6">
+            <div className="w-full h-[30px] flex justify-center items-center">
+              <MdOutlineMail className=" size-6 fill-[#d1c876]"/>
+            </div>
+            <div className="w-full h-[30px] flex justify-center">
+              <p className="text-sm font-josefin text-[#979797]">
+                MatSalaga@hotmail.com
+              </p>
+            </div>
+          </div>
+
+          {/* LinkedIn */}
+          <div className="w-full h-fit p-6">
+            <div className="w-full h-[30px] flex justify-center items-center">
+              <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
+                <FaLinkedin className=" size-6 fill-[#d1c876] hover:fill-[#a39c5c]"/>
+              </Link>
+            </div>
+            <div className="w-full h-[30px] flex justify-center">
+              <Link className="text-decoration-line: underline text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all" href={'https://www.linkedin.com/in/mateuszsalaga/'}>
+                linkedin.com/in/mateuszsalaga
+              </Link>
+            </div>
+          </div>
+
+          {/* CV */}
+          <div className="w-full h-fit p-6">
+            <div className="w-full h-[30px] flex justify-center items-center">
+              <a href="../cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <p className="size-5 font-bold text-center text-[#d1c876] hover:text-[#a39c5c]">
+                  CV
+                </p>
+              </a>
+            </div>
+            <div className="w-full h-[30px] flex justify-center">
+              <p className="text-sm font-josefin ">
+                <a href="../cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-line: underline text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all"
+                >
+                    Click Here!
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
   );
