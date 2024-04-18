@@ -52,7 +52,7 @@ function Tab(clr : string, image : string, title : string, alt : string, content
 
 export default function Projects() {
   return (
-    <div className="w-screen h-screen flex justify-center">
+    <div className="w-full h-screen flex justify-center">
       <div className="w-[750px] h-full">
         <h1 className="font-josefin text-white text-2xl pb-3">
           The Game Assembly:
