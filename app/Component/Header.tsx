@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function GetProjectsButton() {
-  const clicked = <Link href="../Pages/Projects" className="shadow-lg text-xl px-7 text-[#787991] font-josefin font-light hover:text-[#5c5c6e] hover:tracking-wider transition-all">Projects</Link>
+  const clicked = <Link href="../Pages/Projects" className="underline underline-offset-2 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
   const unclicked = <Link href="../Pages/Projects" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
 
   if (usePathname().includes('/Pages/Projects')) {
@@ -14,7 +14,7 @@ function GetProjectsButton() {
 }
 
 function GetAboutButton() {
-  const clicked = <Link href="../Pages/About" className="shadow-lg brightness-100 text-xl px-7 text-[#787991] font-josefin font-light hover:text-[#5c5c6e] hover:tracking-wider transition-all">About</Link>
+  const clicked = <Link href="../Pages/About" className="underline underline-offset-2 brightness-100 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
   const unclicked = <Link href="../Pages/About" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
 
   if (usePathname().includes('/Pages/About')) {
