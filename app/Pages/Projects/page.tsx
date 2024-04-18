@@ -7,18 +7,18 @@ function Tab(clr : string, image : string, title : string, alt : string, content
   
   return (
     <Link href="">
-      <div className={"flex flex-row w-full h-[150px] hover:h-[160px] transition-all overflow-hidden grayscale border-t border-[#979797] hover:grayscale-0 " + last}>
+      <div className={"flex flex-row w-full h-[200px] hover:h-[210px] transition-all overflow-hidden grayscale border-t border-[#979797] hover:grayscale-0 " + last}>
         
         {/* Image */}
-        <div className="h-full w-[270px]">
+        <div className="h-full w-[300px]">
           <CldImage
-            width="280"
+            width="300"
             height="250"
             src={image}
             sizes="100vw"
             crop={{
-              width:"1720",
-              height:"1020",
+              width:"1100",
+              height:"800",
               type: "auto"
             }}
             alt=""
@@ -26,14 +26,14 @@ function Tab(clr : string, image : string, title : string, alt : string, content
         </div>
 
         {/* Text */}
-        <div className="h-full w-[330px] flex flex-col items-center justify-center p-3">
+        <div className="bg-opacity-5 bg-slate-400 h-full w-[450px] flex flex-col items-center justify-center p-8">
           <div className="">
             <h1 className="text-2xl font-josefin text-white">
               {title}
             </h1>
           </div>
             
-          <div className="">
+          <div className="pb-2">
             <h2 className="text-[#979797]">
               {alt}
             </h2>
@@ -52,8 +52,8 @@ function Tab(clr : string, image : string, title : string, alt : string, content
 
 export default function Projects() {
   return (
-    <div className=" w-screen h-screen flex justify-center">
-      <div className="w-[600px] h-full">
+    <div className="w-screen h-screen flex justify-center">
+      <div className="w-[750px] h-full">
         <h1 className="font-josefin text-white text-2xl pb-3">
           The Game Assembly:
         </h1>
