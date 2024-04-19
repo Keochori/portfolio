@@ -8,7 +8,7 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 export default function AboutPage() {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1150px)' })
   if (isTabletOrMobile == true) {
     return AboutMobile();
   } else {
@@ -123,7 +123,7 @@ function AboutMobile() {
       <div className="w-8/12 h-screen flex flex-col">
 
         {/* Portrait */}
-        <div className="w-full h-fill">
+        <div className="w-full h-fill flex justify-center">
             <Image
               className=" rounded-xl grayscale"
               src={Portrait}
@@ -134,9 +134,9 @@ function AboutMobile() {
         </div>
 
         {/* Content */}
-        <div className="w-full h-fit flex justify-center pt-5">
+        <div className="w-full h-fit flex justify-center pt-8">
           <div className="w-11/12 h-fit">
-            <p className="font-josefin text-slate-400 text-xl">
+            <p className="font-josefin text-slate-400 text-xl text-center">
               Hi! My name is Mateusz Salaga and I am a 22 year old video game
               programmer from sweden.
             </p>
