@@ -3,7 +3,7 @@ import Link from "next/link"
 import { CldImage } from 'next-cloudinary';
 
 
-function Tab(clr : string, image : string, title : string, alt : string, content : string, last : string = "") {
+function Tab(clr : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
   
   return (
     <Link href="">
@@ -39,8 +39,8 @@ function Tab(clr : string, image : string, title : string, alt : string, content
             </h2>
           </div>
 
-          <div className="">
-            <h2 className="text-slate-400 text-sm">
+          <div className={" " + contentCSS}>
+            <h2 className="text-slate-400 text-sm pl-1.5 ">
               {content}
             </h2>
           </div>
@@ -53,26 +53,86 @@ function Tab(clr : string, image : string, title : string, alt : string, content
 export default function Projects() {
   return (
     <div className="w-full h-screen flex justify-center">
-      <div className="w-[750px] h-full">
-        <h1 className="font-josefin text-white text-2xl pb-3">
-          The Game Assembly:
+      <div className="w-[750px] h-fit pb-28">
+
+        {/* Personal */}
+        <h1 className="font-josefin text-white text-2xl pb-3 underline flex justify-center">
+          Personal:
         </h1>
-        {Tab("bg-red-500", "Projects/PotionRun/Thumbnail",
-        "Potion Run", 
-        "Endless Runner",
-        "Potion Run is an endless runner created by a group of TGA students using the Unity Game Engine. Click here to learn more."
+
+        {/* Abaddon */}
+        {Tab("bg-red-500", "Projects/Abaddon/Placeholder1",
+        "Abaddon", 
+        "3D Game Engine",
+        "Abaddon is my 3D Game Engine programmed using C++ and the DirectX library. Click here to learn more."
         )}
 
+        {/* Portfolio */}
+        {Tab("bg-red-500", "Projects/Portfolio/ThumbnailE",
+        "Portfolio", 
+        "Website",
+        "My portfolio website is programmed using Next.js and Tailwind CSS. Click here to learn more."
+        ,"border-b", "pl-1")}
+
+        {/* TGA */}
+        <h1 className="underline font-josefin text-white text-2xl pb-3 pt-14 flex justify-center">
+          The Game Assembly [Higher Vocational Education]
+        </h1>
+        
+        {/* 8 */}
+        {Tab("bg-red-500", "Projects/ViperTrace/Thumbnail",
+        "Viper Trace", 
+        "FPS Survival",
+        "Viper Trace is a First-Person-Shooter survival game created by a group of TGA students using their own custom game engine. Click here to learn more."
+        , "", "pl-3")}
+
+        {/* 7 */}
+        {Tab("bg-red-500", "Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
+        "Ekaya & Pebbles: A Helping Hand", 
+        "Third Person Adventure",
+        "Ekaya & Pebbles: A Helping Hand is a Third-Person adventure game created by a group of TGA students using their own custom game engine. Click here to learn more."
+        )}
+
+        {/* 6 */}
+        {Tab("bg-red-500", "Projects/SpiteTheYellowPlague/Thumbnail",
+        "Spite: The Yellow Plague", 
+        "Dungeon Crawler",
+        "Spite: The Yellow Plague is a dungeon crawler created by a group of TGA students using their own custom game engine. Click here to learn more."
+        )}
+
+        {/* 5 */}
+        {Tab("bg-red-500", "Projects/BardKnight/Thumbnail",
+        "Bard Knight", 
+        "Platformer",
+        "Bard Knight is a platformer created by a group of TGA students using their own custom game engine. Click here to learn more."
+        )}
+
+        {/* 4 */}
+        {Tab("bg-red-500", "Projects/TheTravelings/Thumbnail",
+        "The Travelings", 
+        "Adventure",
+        "The Travelings is a 2D Top-down adventure game created by a group of TGA students using their own custom game engine. Click here to learn more."
+        , "", "pl-3")}
+
+        {/* 3 */}
+        {Tab("bg-red-500", "Projects/FallFromGrace/Thumbnail",
+        "Fall From Grace", 
+        "Schmup",
+        "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more."
+        )}
+
+        {/* 2 */}
         {Tab("bg-red-500", "Projects/Abducted/Thumbnail",
         "Abducted", 
         "Puzzle",
         "Abducted is a mobile puzzle game created by a group of TGA students using the Unity Game Engine. Click here to learn more."
         )}
 
-        {Tab("bg-red-500", "Projects/FallFromGrace/Thumbnail",
-        "Fall From Grace", 
-        "Schmup",
-        "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more."
+        {/* 1 */}
+        {Tab("bg-red-500", "Projects/PotionRun/Thumbnail",
+        "Potion Run", 
+        "Endless Runner",
+        "Potion Run is an endless runner created by a group of TGA students using the Unity Game Engine. Click here to learn more."
         , "border-b")}
 
       </div>
