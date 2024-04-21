@@ -119,8 +119,8 @@ function About() {
 
 function AboutMobile() {
   return (
-    <div className="w-full h-screen flex justify-center">
-      <div className="w-8/12 h-screen flex flex-col">
+    <div className="w-full h-fit flex flex-wrap justify-center">
+      <div className="w-8/12 h-fit flex flex-col">
 
         {/* Portrait */}
         <div className="w-full h-fill flex justify-center">
@@ -156,40 +156,46 @@ function AboutMobile() {
           </div>
         </div>
 
-        {/* Contacts Box */}
-        <div className="w-full h-full flex flex-wrap justify-center pt-6">
+      </div>
 
-          {/* Email */}
-          <div className="w-full h-fit flex flex-wrap justify-center p-8">
-              <MdOutlineMail className="size-12 fill-[#d1c876]"/>
-              <p className="text-xl font-josefin text-[#979797]">
-                MatSalaga@hotmail.com
-              </p>
+      {/* Contacts Box */}
+      <div className="w-full h-full flex flex-wrap justify-center pt-10">
+
+        {/* Email */}
+        <div className="w-full h-fit p-8 bg-slate-900 border-t border-slate-800">
+          <div className="flex justify-center">
+            <MdOutlineMail className="size-12 fill-[#d1c876]"/>
           </div>
 
-          {/* LinkedIn */}
-          <div className="w-full h-fit flex justify-center p-8">
-              <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
-                <FaLinkedin className=" size-20 fill-[#d1c876] hover:fill-[#a39c5c]"/>
-              </Link>
+          <div className="flex justify-center">
+            <p className="text-xl font-josefin text-[#979797]">
+              MatSalaga@hotmail.com
+            </p>
           </div>
+        </div>
 
-          {/* CV */}
-          <div className="w-full h-fit p-8">
-            <a  className="flex items-center justify-center"
-                href="../cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              <p className="text-6xl font-bold text-[#d1c876] hover:text-[#a39c5c]">
-                CV
-              </p>
-            </a>
-          </div>
+        {/* LinkedIn */}
+        <div className="w-full h-fit flex justify-center p-8 bg-slate-900 border-t border-slate-800">
+            <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
+              <FaLinkedin className=" size-20 fill-[#d1c876] hover:fill-[#a39c5c]"/>
+            </Link>
+        </div>
 
+        {/* CV */}
+        <div className="w-full h-fit p-8 bg-slate-900 border-t border-b border-slate-800">
+          <a  className="flex items-center justify-center"
+              href="../cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            <p className="text-6xl font-bold text-[#d1c876] hover:text-[#a39c5c]">
+              CV
+            </p>
+          </a>
         </div>
 
       </div>
+
     </div>
   );
 }
