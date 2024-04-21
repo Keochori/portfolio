@@ -157,42 +157,34 @@ function AboutMobile() {
         </div>
 
         {/* Contacts Box */}
-        <div className="w-full h-full flex flex-wrap justify-center pt-5">
+        <div className="w-full h-full flex flex-wrap justify-center pt-6">
 
           {/* Email */}
-          <div className="w-full h-fit pt-10">
-            <div className="w-full h-[30px] flex justify-center items-center">
-              <MdOutlineMail className=" size-12 fill-[#d1c876]"/>
-            </div>
-            <div className="w-full h-[30px] flex justify-center">
-              <p className="text-xl font-josefin text-[#979797] pt-4">
+          <div className="w-full h-fit flex flex-wrap justify-center p-8">
+              <MdOutlineMail className="size-12 fill-[#d1c876]"/>
+              <p className="text-xl font-josefin text-[#979797]">
                 MatSalaga@hotmail.com
               </p>
-            </div>
           </div>
 
           {/* LinkedIn */}
-          <div className="w-full h-fit pt-4">
-            <div className="w-full h-[30px] flex justify-center items-center">
+          <div className="w-full h-fit flex justify-center p-8">
               <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
                 <FaLinkedin className=" size-20 fill-[#d1c876] hover:fill-[#a39c5c]"/>
               </Link>
-            </div>
           </div>
 
           {/* CV */}
-          <div className="w-full h-fit pt-6">
-            <div className="w-full h-[30px] flex justify-center">
-              <a  className="flex items-center justify-center"
-                  href="../cv.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                <p className="text-6xl font-bold text-[#d1c876] hover:text-[#a39c5c]">
-                  CV
-                </p>
-              </a>
-            </div>
+          <div className="w-full h-fit p-8">
+            <a  className="flex items-center justify-center"
+                href="../cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              <p className="text-6xl font-bold text-[#d1c876] hover:text-[#a39c5c]">
+                CV
+              </p>
+            </a>
           </div>
 
         </div>
