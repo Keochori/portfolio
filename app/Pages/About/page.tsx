@@ -170,7 +170,7 @@ function AboutMobile() {
           {/* LinkedIn */}
           <div className="w-full h-fit flex justify-center p-8">
               <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
-                <FaLinkedin className=" size-20 fill-[#d1c876] hover:fill-[#a39c5c]"/>
+                <FaLinkedin className=" size-20 fill-[#d1c876]"/>
               </Link>
           </div>
 
@@ -181,7 +181,7 @@ function AboutMobile() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              <p className="text-6xl font-bold text-[#d1c876] hover:text-[#a39c5c]">
+              <p className="text-6xl font-bold text-[#d1c876]">
                 CV
               </p>
             </a>
