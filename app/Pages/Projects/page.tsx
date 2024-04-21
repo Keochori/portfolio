@@ -3,7 +3,7 @@ import Link from "next/link"
 import { CldImage } from 'next-cloudinary';
 
 
-function Tab(clr : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
+function Tab(image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
   
   return (
     <Link href="">
@@ -61,14 +61,14 @@ export default function Projects() {
         </h1>
 
         {/* Abaddon */}
-        {Tab("bg-red-500", "Projects/Abaddon/Placeholder1",
+        {Tab("Projects/Abaddon/Placeholder1",
         "Abaddon", 
         "3D Game Engine",
         "Abaddon is my 3D Game Engine programmed using C++ and the DirectX library. Click here to learn more."
         )}
 
         {/* Portfolio */}
-        {Tab("bg-red-500", "Projects/Portfolio/ThumbnailE",
+        {Tab("Projects/Portfolio/ThumbnailE",
         "Portfolio", 
         "Website",
         "My portfolio website is programmed using Next.js and Tailwind CSS. Click here to learn more."
@@ -79,57 +79,64 @@ export default function Projects() {
           The Game Assembly [Higher Vocational Education]
         </h1>
         
+        {/* Specialization */}
+        {Tab("Projects/ProceduralGeneration/Thumbnail",
+        "Procedural Generation", 
+        "Specialization",
+        "For my specialization project at The Game Assembly, I chose to learn more about procedural generation. The engine I chose to work in was Unreal Engine. Click here to learn more."
+        , "", "pl-3")}
+        
         {/* 8 */}
-        {Tab("bg-red-500", "Projects/ViperTrace/Thumbnail",
+        {Tab("Projects/ViperTrace/Thumbnail",
         "Viper Trace", 
         "FPS Survival",
         "Viper Trace is a First-Person-Shooter survival game created by a group of TGA students using their own custom game engine. Click here to learn more."
         , "", "pl-3")}
 
         {/* 7 */}
-        {Tab("bg-red-500", "Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
+        {Tab("Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
         "Ekaya & Pebbles: A Helping Hand", 
         "Third Person Adventure",
         "Ekaya & Pebbles: A Helping Hand is a Third-Person adventure game created by a group of TGA students using their own custom game engine. Click here to learn more."
         )}
 
         {/* 6 */}
-        {Tab("bg-red-500", "Projects/SpiteTheYellowPlague/Thumbnail",
+        {Tab("Projects/SpiteTheYellowPlague/Thumbnail",
         "Spite: The Yellow Plague", 
         "Dungeon Crawler",
         "Spite: The Yellow Plague is a dungeon crawler created by a group of TGA students using their own custom game engine. Click here to learn more."
         )}
 
         {/* 5 */}
-        {Tab("bg-red-500", "Projects/BardKnight/Thumbnail",
+        {Tab("Projects/BardKnight/Thumbnail",
         "Bard Knight", 
         "Platformer",
         "Bard Knight is a platformer created by a group of TGA students using their own custom game engine. Click here to learn more."
         )}
 
         {/* 4 */}
-        {Tab("bg-red-500", "Projects/TheTravelings/Thumbnail",
+        {Tab("Projects/TheTravelings/Thumbnail",
         "The Travelings", 
         "Adventure",
         "The Travelings is a 2D Top-down adventure game created by a group of TGA students using their own custom game engine. Click here to learn more."
         , "", "pl-3")}
 
         {/* 3 */}
-        {Tab("bg-red-500", "Projects/FallFromGrace/Thumbnail",
+        {Tab("Projects/FallFromGrace/Thumbnail",
         "Fall From Grace", 
         "Schmup",
         "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more."
         )}
 
         {/* 2 */}
-        {Tab("bg-red-500", "Projects/Abducted/Thumbnail",
+        {Tab("Projects/Abducted/Thumbnail",
         "Abducted", 
         "Puzzle",
         "Abducted is a mobile puzzle game created by a group of TGA students using the Unity Game Engine. Click here to learn more."
         )}
 
         {/* 1 */}
-        {Tab("bg-red-500", "Projects/PotionRun/Thumbnail",
+        {Tab("Projects/PotionRun/Thumbnail",
         "Potion Run", 
         "Endless Runner",
         "Potion Run is an endless runner created by a group of TGA students using the Unity Game Engine. Click here to learn more."
