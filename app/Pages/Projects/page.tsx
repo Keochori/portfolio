@@ -159,7 +159,7 @@ function Projects() {
 function TabMobile(image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
   return (
     <Link href="">
-        <div className={"w-full h-fit border-t bg-opacity-5 bg-slate-400 border-[#979797] " + last}>
+        <div className={"w-full h-fit border-t bg-opacity-5 bg-slate-100 border-[#979797] hover:bg-opacity-10 " + last}>
 
           <div className="w-full h-full flex flex-col items-center justify-center pt-4">
             <div className="pt-2">
