@@ -85,7 +85,7 @@ function Projects() {
 
           {/* TGA */}
           <h1 className="underline font-josefin text-white text-2xl pb-3 pt-14 flex justify-center">
-            The Game Assembly [Higher Vocational Education]
+            The Game Assembly [Higher Vocational Education]:
           </h1>
           
           {/* Specialization */}
@@ -226,7 +226,7 @@ function ProjectsMobile() {
 
       {/* TGA */}
       <h1 className="underline font-josefin text-white text-2xl pb-3 pt-14 text-center">
-        The Game Assembly [Higher Vocational Education]
+        The Game Assembly [Higher Vocational Education]:
       </h1>
       
       {/* Specialization */}
