@@ -163,7 +163,7 @@ function TabMobile(image : string, title : string, alt : string, content : strin
 
           <div className="w-full h-full flex flex-col items-center justify-center pt-4">
             <div className="pt-2">
-              <p className="text-2xl font-josefin text-white">
+              <p className="text-2xl font-josefin text-white text-center">
                 {title}
               </p>
             </div>
