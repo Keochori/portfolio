@@ -6,7 +6,7 @@ function GetProjectsButton() {
   const clicked = <Link href="/Pages/Projects" className="underline underline-offset-2 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
   const unclicked = <Link href="/Pages/Projects" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
 
-  if (usePathname().includes('/Pages/Projects')) {
+  if (usePathname() == ('/Pages/Projects')) {
     return clicked;
   } else {
     return unclicked;
@@ -17,7 +17,7 @@ function GetAboutButton() {
   const clicked = <Link href="/Pages/About" className="underline underline-offset-2 brightness-100 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
   const unclicked = <Link href="/Pages/About" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
 
-  if (usePathname().includes('/Pages/About')) {
+  if (usePathname() == ('/Pages/About')) {
     return clicked;
   } else {
     return unclicked;
