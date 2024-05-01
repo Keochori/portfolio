@@ -7,6 +7,15 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import { useMediaQuery } from 'react-responsive'
 
+export default function Page() {
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1150px)' })
+    if (isTabletOrMobile == true) {
+      return TheTravelingsMobile();
+    } else {
+      return TheTravelings();
+    }
+  }
+
 function ProjectTab(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
     return (
       <Link href={href}>
@@ -53,7 +62,7 @@ function ProjectTab(href : string, image : string, title : string, alt : string,
     )
 }
 
-function ContentText(title : string, content : string, bg2 : string) {
+function ContentText(title : string, content : string) {
     return (
         // Text
         <div className={"w-full h-full text-center p-20 pt-8 text-white "}>
@@ -68,7 +77,7 @@ function ContentText(title : string, content : string, bg2 : string) {
     )
 }
 
-function ContentImage(image : string, bg1 : string, justify : string) {
+function ContentImage(image : string, justify : string) {
     return (
         // Image
         <div className={"w-[1600px] h-full flex " + justify}>
@@ -83,34 +92,25 @@ function ContentImage(image : string, bg1 : string, justify : string) {
     )
 }
 
-function ContentTab(left : boolean, image : string, title : string, content : string, bg1 : string, bg2 : string, last : string = "") {
+function ContentTab(left : boolean, image : string, title : string, content : string) {
     if (left) {
         return (
-            <div className={"bg-slate-600 bg-opacity-20 w-full h-[400px] flex " + last}>
-                {ContentImage(image, bg1, "justify-end")}
-                {ContentText(title, content, bg2)}
+            <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
+                {ContentImage(image, "justify-end")}
+                {ContentText(title, content)}
             </div>
         )
     } 
     else 
     {
         return (
-            <div className={"bg-slate-600 bg-opacity-20 w-full h-[400px] flex " + last}>
-                {ContentText(title, content, bg2)}
-                {ContentImage(image, bg1, "justify-begin")}
+            <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
+                {ContentText(title, content)}
+                {ContentImage(image, "justify-begin")}
             </div>
         )
     }
 }
-
-export default function Page() {
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1150px)' })
-    if (isTabletOrMobile == true) {
-      return TheTravelingsMobile();
-    } else {
-      return TheTravelings();
-    }
-  }
 
 function TheTravelings() {
     return (
@@ -160,8 +160,6 @@ function TheTravelings() {
                     "Projects/TheTravelings/Tents",
                     "What is it?",
                     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
-                    "bg-yellow-600",
-                    "bg-red-600"
                     )}
 
                 {ContentTab(
@@ -169,8 +167,6 @@ function TheTravelings() {
                     "Projects/TheTravelings/Tents",
                     "What is it?",
                     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
-                    "bg-pink-600",
-                    "bg-purple-600"
                     )}
 
                 {ContentTab(
@@ -178,9 +174,6 @@ function TheTravelings() {
                     "Projects/TheTravelings/Tents",
                     "What is it?",
                     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
-                    "bg-pink-600",
-                    "bg-purple-600",
-                    ""
                     )}
             </div>
 
