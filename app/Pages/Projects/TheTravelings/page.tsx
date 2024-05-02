@@ -94,8 +94,8 @@ function ProjectTab(href : string, image : string, title : string, alt : string,
 function ContentText(title : string, content : string) {
     return (
         // Text
-        <div className={"w-full h-full text-center p-20 pt-8 text-white "}>
-            <p className="font-josefin text-6xl pb-3">
+        <div className={"w-full h-full text-center p-20 pt-14 text-white "}>
+            <p className="font-josefin text-6xl pb-6">
                 {title}
             </p>
 
