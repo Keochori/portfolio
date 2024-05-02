@@ -7,6 +7,35 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import { useMediaQuery } from 'react-responsive'
 
+// Tab content:---
+
+//T1
+const T1Image = "Projects/TheTravelings/Tents"
+const T1Title = "What is it?"
+const T1Content = "The Travelings is a 2D Adventurer for PC created by a group of TGA (The Game Assembly) students using the TGA Engine. The story follows a caravan of nomads in the desert looking to find their way to the Oasis, an almost dreamlike place with fresh water and plenty of food. Along the way, they stumble upon obstacles and dangers, but as a brave member of the caravan you decide to help clear the path."
+
+//T2
+const T2Image = "Projects/TheTravelings/Attack"
+const T2Title = "Player Mechanics"
+const T2Content = "One of my contributions to The Travelings was the creation of the main player mechanics, which includes basic movement, dodge roll and a standard attack that can be turned into a three hit-combo.  All essential variables such as movement speed, damage, dodge duration, etc, were exposed for easy modification by our Level Designers using .json files."
+
+//T3
+const T3Image = "Projects/TheTravelings/Icon"
+const T3Title = "Input / Controls"
+const T3Content = "Another one of my contributions for the project was helping build and utilize the Input Manager system. The Input Manager uses subscription type managment, making it possible for different parts of the game system to subscribe, recieve and react accordingly to input by the player."
+
+//T3
+const T4Image = "Projects/TheTravelings/Run"
+const T4Title = "Animations"
+const T4Content = "My final main contribution to the game was the implementation of animations. Using assets provided by our talented team of artists and the TGA Engine animation controller, I was able create and utilize a pipeline that would later be used for all of our animations in-game."
+
+//Gallery
+const G1 = "Projects/TheTravelings/G3"
+const G2 = "Projects/TheTravelings/G2"
+const G3 = "Projects/TheTravelings/G1"
+const G4 = "Projects/TheTravelings/G4"
+//----------------
+
 export default function Page() {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1150px)' })
     if (isTabletOrMobile == true) {
@@ -14,7 +43,7 @@ export default function Page() {
     } else {
       return TheTravelings();
     }
-  }
+}
 
 function ProjectTab(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
     return (
@@ -70,7 +99,7 @@ function ContentText(title : string, content : string) {
                 {title}
             </p>
 
-            <p className="font-josefin text-2xl"> 
+            <p className="font-josefin font-light text-2xl"> 
                 {content}
             </p>
         </div>
@@ -139,7 +168,7 @@ function TheTravelings() {
 
                 {/* Engine */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Engine: Custom
+                    Engine: TGA Engine
                 </p>
 
                 {/* Contribution */}
@@ -157,23 +186,30 @@ function TheTravelings() {
             <div className="w-full h-fit pt-20 space-y-20 pb-20">
                 {ContentTab(
                     true,
-                    "Projects/TheTravelings/Tents",
-                    "What is it?",
-                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
+                    T1Image,
+                    T1Title,
+                    T1Content,
                     )}
 
                 {ContentTab(
                     false,
-                    "Projects/TheTravelings/Tents",
-                    "What is it?",
-                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
+                    T2Image,
+                    T2Title,
+                    T2Content,
                     )}
 
                 {ContentTab(
                     true,
-                    "Projects/TheTravelings/Tents",
-                    "What is it?",
-                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
+                    T3Image,
+                    T3Title,
+                    T3Content,
+                    )}
+
+                {ContentTab(
+                    false,
+                    T4Image,
+                    T4Title,
+                    T4Content,
                     )}
             </div>
 
@@ -204,7 +240,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G1}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -214,7 +250,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G2}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -227,7 +263,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G3}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -237,7 +273,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G4}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -357,22 +393,22 @@ function ProjectTabMobile(href : string, image : string, title : string, alt : s
     )
   }
 
-function ContentTextMobile(title : string, content : string, bg2 : string) {
+function ContentTextMobile(title : string, content : string) {
     return (
         // Text
-        <div className={"w-full h-full text-center pt-8 text-white "}>
+        <div className={"w-full h-full text-center p-6 pt-8 text-white "}>
             <p className="font-josefin text-6xl pb-3">
                 {title}
             </p>
 
-            <p className="font-josefin text-2xl"> 
+            <p className="font-josefin font-light text-2xl"> 
                 {content}
             </p>
         </div>
     )
 }
 
-function ContentImageMobile(image : string, bg1 : string, justify : string) {
+function ContentImageMobile(image : string, justify : string) {
     return (
         // Image
         <div className={"flex pt-5 " + justify}>
@@ -387,11 +423,11 @@ function ContentImageMobile(image : string, bg1 : string, justify : string) {
     )
 }
 
-function ContentTabMobile(image : string, title : string, content : string, bg1 : string, bg2 : string, last : string = "") {
+function ContentTabMobile(image : string, title : string, content : string) {
     return (
-        <div className={"bg-slate-600 bg-opacity-20 w-full fit flex justify-center flex-wrap " + last}>
-            {ContentTextMobile(title, content, bg2)}
-            {ContentImageMobile(image, bg1, "justify-begin")}
+        <div className="bg-slate-600 bg-opacity-20 w-full fit flex justify-center flex-wrap">
+            {ContentTextMobile(title, content)}
+            {ContentImageMobile(image, "justify-begin")}
         </div>
     )
 }
@@ -424,7 +460,7 @@ function TheTravelingsMobile() {
 
                 {/* Engine */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Engine: Custom
+                    Engine: TGA Engine
                 </p>
 
                 {/* Contribution */}
@@ -440,19 +476,27 @@ function TheTravelingsMobile() {
             {/* Content */}
             <div className="w-full h-fit pt-20 space-y-20 pb-20">
                 {ContentTabMobile(
-                    "Projects/TheTravelings/Tents",
-                    "What is it?",
-                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
-                    "bg-yellow-600",
-                    "bg-red-600"
+                    T1Image,
+                    T1Title,
+                    T1Content,
                     )}
 
                 {ContentTabMobile(
-                    "Projects/TheTravelings/Tents",
-                    "What is it?",
-                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dicta et debitis natus facere molestias saepe at, consectetur doloribus blanditiis id pariatur nesciunt, ullam sed cum quis accusamus exercitationem nobis.",
-                    "bg-yellow-600",
-                    "bg-red-600"
+                    T2Image,
+                    T2Title,
+                    T2Content,
+                    )}
+
+                {ContentTabMobile(
+                    T3Image,
+                    T3Title,
+                    T3Content,
+                    )}
+
+                {ContentTabMobile(
+                    T4Image,
+                    T4Title,
+                    T4Content,
                     )}
             </div>
 
@@ -482,7 +526,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G1}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -492,7 +536,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G2}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -501,7 +545,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G3}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -511,7 +555,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src="Projects/TheTravelings/Tents"
+                                    src={G4}
                                     sizes="100vw"
                                     alt=""
                                 />
