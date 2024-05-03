@@ -219,7 +219,7 @@ function TheTravelings() {
                 <div className="bg-slate-600 bg-opacity-20 w-[1250px] h-fit flex flex-wrap justify-center pb-16 rounded-3xl">
 
                     {/* Text */}
-                    <div className="w-[1200px] h-fit flex flex-col items-center space-y-1 p-8 pb-3">
+                    <div className="w-[1200px] h-fit flex flex-col items-center space-y-1 p-12 pb-5">
                         <div className="w-full h-fit flex justify-center">
                             <p className="font-josefin text-5xl text-white">
                                 Gallery & Trailer
@@ -396,8 +396,8 @@ function ProjectTabMobile(href : string, image : string, title : string, alt : s
 function ContentTextMobile(title : string, content : string) {
     return (
         // Text
-        <div className={"w-full h-full text-center p-6 pt-8 text-white "}>
-            <p className="font-josefin text-6xl pb-3">
+        <div className={"w-full h-full text-center p-6 pt-9 text-white "}>
+            <p className="font-josefin text-6xl pb-4">
                 {title}
             </p>
 
@@ -506,9 +506,9 @@ function TheTravelingsMobile() {
                 <div className="bg-slate-600 bg-opacity-20 w-full h-fit flex flex-wrap justify-center">
 
                     {/* Text */}
-                    <div className="w-fit h-fit flex flex-col items-center space-y-1 p-8 pb-3">
+                    <div className="w-fit h-fit flex flex-col items-center space-y-1 p-9 pb-4">
                         <div className="w-full h-fit flex justify-center">
-                            <p className="font-josefin text-4xl text-white">
+                            <p className="font-josefin text-5xl text-white">
                                 Gallery & Trailer
                             </p>
                         </div>
