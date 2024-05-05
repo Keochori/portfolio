@@ -6,42 +6,51 @@ import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import { useMediaQuery } from 'react-responsive'
+import { DiVim } from 'react-icons/di';
 
-// Tab content:---
+interface ProjectTabProps {
+    left: boolean;
+    image: string;
+    title: string;
+    content: string;
+  }
 
-//T1
-const T1Image = "Projects/TheTravelings/Tents"
-const T1Title = "What is it?"
-const T1Content = "The Travelings is a 2D Adventurer for PC created by a group of TGA (The Game Assembly) students using the TGA Engine. The story follows a caravan of nomads in the desert looking to find their way to the Oasis, an almost dreamlike place with fresh water and plenty of food. Along the way, they stumble upon obstacles and dangers, but as a brave member of the caravan you decide to help clear the path."
+  interface ProjectGalleryProps {
+    image1: string;
+    image2: string;
+    image3: string;
+    image4: string;
+    trailer: string;
+  }
 
-//T2
-const T2Image = "Projects/TheTravelings/Attack"
-const T2Title = "Player Mechanics"
-const T2Content = "One of my contributions to The Travelings was the creation of the main player mechanics, which includes basic movement, dodge roll and a standard attack that can be turned into a three hit-combo.  All essential variables such as movement speed, damage, dodge duration, etc, were exposed for easy modification by our Level Designers using .json files."
+  interface MoreProjectsProps {
+    link: string;
+    image: string;
+    title: string;
+    genre: string;
+    content: string;
+  }
 
-//T3
-const T3Image = "Projects/TheTravelings/Icon"
-const T3Title = "Input / Controls"
-const T3Content = "Another one of my contributions for the project was helping build and utilize the Input Manager system. The Input Manager uses subscription type managment, making it possible for different parts of the game system to subscribe, recieve and react accordingly to input by the player."
+export interface ProjectProps {
+    title: string;
+    genre: string;
 
-//T3
-const T4Image = "Projects/TheTravelings/Run"
-const T4Title = "Animations"
-const T4Content = "My final main contribution to the game was the implementation of animations. Using assets provided by our talented team of artists and the TGA Engine animation controller, I was able create and utilize a pipeline that would later be used for all of our animations in-game."
+    platform: string;
+    engine: string;
+    contributions: string;
+  
+    tabs: ProjectTabProps[];
+    gallery: ProjectGalleryProps;
+    projects: MoreProjectsProps[];
+  }
 
-//Gallery
-const G1 = "Projects/TheTravelings/G3"
-const G2 = "Projects/TheTravelings/G2"
-const G3 = "Projects/TheTravelings/G1"
-const G4 = "Projects/TheTravelings/G4"
-//----------------
-
-export default function Page() {
+export default function Page(props: ProjectProps) {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1150px)' })
+
     if (isTabletOrMobile == true) {
-      return TheTravelingsMobile();
+      return TemplateMobile(props);
     } else {
-      return TheTravelings();
+      return Template(props);
     }
 }
 
@@ -141,7 +150,7 @@ function ContentTab(left : boolean, image : string, title : string, content : st
     }
 }
 
-function TheTravelings() {
+function Template(props: ProjectProps) {
     return (
         <div className="w-full h-fit flex flex-col items-center">
 
@@ -149,12 +158,12 @@ function TheTravelings() {
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit flex flex-col items-center pt-12 pb-4">
                 {/* Title */}
                 <p className="text-white font-josefin text-5xl">
-                    The Travelings
+                    {props.title}
                 </p>
 
                 {/* Alt */}
                 <p className="font-josefin text-3xl text-[#cac18e]">
-                    Adventure
+                    {props.genre}
                 </p>
 
             </div>
@@ -163,54 +172,29 @@ function TheTravelings() {
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit text-center flex items-center flex-col pb-10">
                 {/* Platform */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Platform: PC
+                    Platform: {props.platform}
                 </p>
 
                 {/* Engine */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Engine: TGA Engine
+                    Engine: {props.engine}
                 </p>
 
                 {/* Contribution */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Contributions: Player Mechanics, Input/Controls, Animations
+                    Contributions: {props.contributions}
                 </p>
 
                 {/* Separator Line */}
                 <div className="bg-gray-700 w-[600px] h-[2px] rounded-xl">
-
                 </div>
             </div>
 
             {/* Content */}
             <div className="w-full h-fit pt-20 space-y-20 pb-20">
-                {ContentTab(
-                    true,
-                    T1Image,
-                    T1Title,
-                    T1Content,
-                    )}
-
-                {ContentTab(
-                    false,
-                    T2Image,
-                    T2Title,
-                    T2Content,
-                    )}
-
-                {ContentTab(
-                    true,
-                    T3Image,
-                    T3Title,
-                    T3Content,
-                    )}
-
-                {ContentTab(
-                    false,
-                    T4Image,
-                    T4Title,
-                    T4Content,
-                    )}
+                {props.tabs.map((tab) => {
+                    return ContentTab(tab.left, tab.image, tab.title, tab.content)
+                })}
             </div>
 
             <div className="w-full h-full flex flex-wrap justify-center space-y-14">
@@ -240,7 +224,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src={G1}
+                                    src={props.gallery.image1}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -250,7 +234,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src={G2}
+                                    src={props.gallery.image2}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -263,7 +247,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src={G3}
+                                    src={props.gallery.image3}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -273,7 +257,7 @@ function TheTravelings() {
                                 <CldImage className="rounded-xl"
                                     width="535"
                                     height="200"
-                                    src={G4}
+                                    src={props.gallery.image4}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -287,7 +271,7 @@ function TheTravelings() {
                             <CldVideoPlayer
                                 width="1920"
                                 height="1080"
-                                src="Projects/TheTravelings/Trailer"
+                                src={props.gallery.trailer}
                                 logo={false}
                             />
                         </div>
@@ -326,19 +310,15 @@ function TheTravelings() {
                     
                     {/* Tabs */}
                     <div className="w-full h-[250px] flex justify-center">
-                        {ProjectTab("/Pages/Projects/ProceduralGeneration",
-                        "Projects/FallFromGrace/Thumbnail",
-                        "Fall From Grace", 
-                        "Schmup",
-                        "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more."
-                        )}
-
-                        {ProjectTab("/Pages/Projects/ProceduralGeneration",
-                        "Projects/BardKnight/Thumbnail",
-                        "Bard Knight", 
-                        "Platformer",
-                        "Bard Knight is a platformer created by a group of TGA students using their own custom game engine. Click here to learn more."
-                        )}
+                        {props.projects.map((project) => {
+                            return ProjectTab(
+                                project.link,
+                                project.image,
+                                project.title,
+                                project.genre,
+                                project.content,
+                            )
+                        })}
                     </div>
                 </div>
             </div>
@@ -391,7 +371,7 @@ function ProjectTabMobile(href : string, image : string, title : string, alt : s
           </div>
         </Link>
     )
-  }
+}
 
 function ContentTextMobile(title : string, content : string) {
     return (
@@ -432,7 +412,7 @@ function ContentTabMobile(image : string, title : string, content : string) {
     )
 }
 
-function TheTravelingsMobile() {
+function TemplateMobile(props: ProjectProps) {
     return (
         <div className="w-full h-fit flex flex-col items-center">
 
@@ -440,12 +420,12 @@ function TheTravelingsMobile() {
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit flex flex-col items-center pt-12 pb-4">
                 {/* Title */}
                 <p className="text-white font-josefin text-5xl">
-                    The Travelings
+                    {props.title}
                 </p>
 
                 {/* Alt */}
                 <p className="font-josefin text-3xl text-[#cac18e]">
-                    Adventure
+                    {props.genre}
                 </p>
 
             </div>
@@ -455,17 +435,17 @@ function TheTravelingsMobile() {
 
                 {/* Platform */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Platform: PC
+                    Platform: {props.platform}
                 </p>
 
                 {/* Engine */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Engine: TGA Engine
+                    Engine: {props.engine}
                 </p>
 
                 {/* Contribution */}
                 <p className="font-josefin text-2xl text-[#979797]">
-                    Contributions: Player Mechanics, Input/Controls, Animations
+                    Contributions: {props.contributions}
                 </p>
 
                 {/* Separator Line */}
@@ -475,29 +455,9 @@ function TheTravelingsMobile() {
 
             {/* Content */}
             <div className="w-full h-fit pt-20 space-y-20 pb-20">
-                {ContentTabMobile(
-                    T1Image,
-                    T1Title,
-                    T1Content,
-                    )}
-
-                {ContentTabMobile(
-                    T2Image,
-                    T2Title,
-                    T2Content,
-                    )}
-
-                {ContentTabMobile(
-                    T3Image,
-                    T3Title,
-                    T3Content,
-                    )}
-
-                {ContentTabMobile(
-                    T4Image,
-                    T4Title,
-                    T4Content,
-                    )}
+                {props.tabs.map((tab) => {
+                    return ContentTabMobile(tab.image, tab.title, tab.content)
+                })}
             </div>
 
             <div className="w-full h-full flex flex-wrap justify-center space-y-14">
@@ -508,7 +468,7 @@ function TheTravelingsMobile() {
                     {/* Text */}
                     <div className="w-fit h-fit flex flex-col items-center space-y-1 p-9 pb-4">
                         <div className="w-full h-fit flex justify-center">
-                            <p className="font-josefin text-5xl text-white">
+                            <p className="font-josefin text-4xl text-white">
                                 Gallery & Trailer
                             </p>
                         </div>
@@ -526,7 +486,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src={G1}
+                                    src={props.gallery.image1}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -536,7 +496,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src={G2}
+                                    src={props.gallery.image2}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -545,7 +505,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src={G3}
+                                    src={props.gallery.image3}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -555,7 +515,7 @@ function TheTravelingsMobile() {
                                 <CldImage className="rounded-xl"
                                     width="1000"
                                     height="200"
-                                    src={G4}
+                                    src={props.gallery.image4}
                                     sizes="100vw"
                                     alt=""
                                 />
@@ -569,7 +529,7 @@ function TheTravelingsMobile() {
                             <CldVideoPlayer
                                 width="1920"
                                 height="1080"
-                                src="Projects/TheTravelings/Trailer"
+                                src={props.gallery.trailer}
                                 logo={false}
                             />
                         </div>
@@ -606,19 +566,15 @@ function TheTravelingsMobile() {
 
                     {/* Tabs */}
                     <div className="w-full h-fit justify-center">
-                        {ProjectTabMobile("/Pages/Projects/ProceduralGeneration",
-                        "Projects/FallFromGrace/Thumbnail",
-                        "Fall From Grace", 
-                        "Schmup",
-                        "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more."
-                        )}
-
-                        {ProjectTabMobile("/Pages/Projects/ProceduralGeneration",
-                        "Projects/BardKnight/Thumbnail",
-                        "Bard Knight", 
-                        "Platformer",
-                        "Bard Knight is a platformer created by a group of TGA students using their own custom game engine. Click here to learn more."
-                        )}
+                    {props.projects.map((project) => {
+                            return ProjectTabMobile(
+                                project.link,
+                                project.image,
+                                project.title,
+                                project.genre,
+                                project.content,
+                            )
+                        })}
                     </div>
 
                 </div>
