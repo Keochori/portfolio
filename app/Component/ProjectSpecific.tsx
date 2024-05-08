@@ -174,22 +174,20 @@ function Template(props: ProjectProps) {
                 <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen"/>
 
                 {/* Image */}
-                <div className="w-[73%] h-screen">
-                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+                <div className="w-[73%] h-screen grid grid-rows-[1fr_max-content_1fr]">
+                    <div onClick={() => {toggleFullscrenImage("")}} className=""/>
 
-                    <div className="w-full h-[84%] flex justify-center items-center">
-                        <div>
-                            <CldImage className=""
-                                width="1400"
-                                height="200"
-                                src={selectedImage}
-                                sizes="100vw"
-                                alt=""
-                            />
-                        </div>
+                    <div className="h-fit">
+                        <CldImage className=""
+                            width="1400"
+                            height="200"
+                            src={selectedImage}
+                            sizes="100vw"
+                            alt=""
+                        />
                     </div>
 
-                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+                    <div onClick={() => {toggleFullscrenImage("")}} className=""/>
                 </div>
 
                 {/* Exit Button */}
@@ -494,22 +492,20 @@ function TemplateMobile(props: ProjectProps) {
                 <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen"/>
 
                 {/* Image */}
-                <div className="w-[73%] h-screen">
-                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+                <div className="w-[73%] h-screen grid grid-rows-[1fr_max-content_1fr]">
+                    <div onClick={() => {toggleFullscrenImage("")}} className=""/>
 
-                    <div className="w-full h-[84%] flex justify-center items-center">
-                        <div>
-                            <CldImage className=""
-                                width="1400"
-                                height="200"
-                                src={selectedImage}
-                                sizes="100vw"
-                                alt=""
-                            />
-                        </div>
+                    <div className="h-fit">
+                        <CldImage className=""
+                            width="1400"
+                            height="200"
+                            src={selectedImage}
+                            sizes="100vw"
+                            alt=""
+                        />
                     </div>
 
-                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+                    <div onClick={() => {toggleFullscrenImage("")}} className=""/>
                 </div>
 
                 {/* Exit Button */}
