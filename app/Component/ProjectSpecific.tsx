@@ -1,12 +1,12 @@
 "use client"
+import 'next-cloudinary/dist/cld-video-player.css';
 import { CldImage } from 'next-cloudinary';
 import { CldVideoPlayer } from 'next-cloudinary';
-import 'next-cloudinary/dist/cld-video-player.css';
-import { FaArrowCircleLeft } from "react-icons/fa";
-import { FaArrowCircleRight } from "react-icons/fa";
 import Link from "next/link";
+import { useState } from "react";
 import { useMediaQuery } from 'react-responsive'
-import { DiVim } from 'react-icons/di';
+import { TfiClose } from "react-icons/tfi";
+
 
 interface ProjectTabProps {
     left: boolean;
@@ -115,44 +115,92 @@ function ContentText(title : string, content : string) {
     )
 }
 
-function ContentImage(image : string, justify : string) {
-    return (
-        // Image
-        <div className={"w-[1600px] h-full flex " + justify}>
-            <CldImage className="rounded-xl"
-                width="710"
-                height="200"
-                src={image}
-                sizes="100vw"
-                alt=""
-            />
-        </div>
-    )
-}
+function Template(props: ProjectProps) {
+    const [selectedImage, setSelectedImage] = useState("");
+    const [showFullscreenImage, setShowFullscreenImage] = useState(false);
+    
+    const toggleFullscrenImage = (image : string) => {
+        setSelectedImage(image);
+        setShowFullscreenImage(!showFullscreenImage);
+        if (showFullscreenImage) {
+            document.body.style.overflow = "auto";
+        } else {
+            document.body.style.overflow = "hidden";
+        }
+    };
 
-function ContentTab(left : boolean, image : string, title : string, content : string) {
-    if (left) {
+    const ContentImage = (image : string, justify : string) => {
         return (
-            <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
-                {ContentImage(image, "justify-end")}
-                {ContentText(title, content)}
-            </div>
-        )
-    } 
-    else 
-    {
-        return (
-            <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
-                {ContentText(title, content)}
-                {ContentImage(image, "justify-begin")}
+            // Image
+            <div className={"w-[1600px] h-full flex " + justify}>
+                <button onClick={() => {toggleFullscrenImage(image)}}>
+                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                        width="710"
+                        height="200"
+                        src={image}
+                        sizes="100vw"
+                        alt=""
+                    />
+                </button>
             </div>
         )
     }
-}
 
-function Template(props: ProjectProps) {
+    const ContentTab = (left : boolean, image : string, title : string, content : string) => {
+        if (left) {
+            return (
+                <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
+                    {ContentImage(image, "justify-end")}
+                    {ContentText(title, content)}
+                </div>
+            )
+        } 
+        else 
+        {
+            return (
+                <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
+                    {ContentText(title, content)}
+                    {ContentImage(image, "justify-begin")}
+                </div>
+            )
+        }
+    }
+
     return (
         <div className="w-full h-fit flex flex-col items-center">
+            
+            {/* Fullscreen Image */}
+            <div className={showFullscreenImage ? "sticky top-0 bg-black bg-opacity-90 w-full h-screen flex z-50" : "hidden"}>
+                <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen"/>
+
+                {/* Image */}
+                <div className="w-[73%] h-screen">
+                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+
+                    <div className="w-full h-[84%] flex justify-center items-center">
+                        <div>
+                            <CldImage className=""
+                                width="1400"
+                                height="200"
+                                src={selectedImage}
+                                sizes="100vw"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+
+                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+                </div>
+
+                {/* Exit Button */}
+                <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen">
+                    <div className="w-full h-[20%] flex justify-center items-center">
+                        <button onClick={() => {toggleFullscrenImage("");}}>
+                            <TfiClose className="size-16 fill-white opacity-20 transition-all hover:opacity-100"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             {/* Header */}
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit flex flex-col items-center pt-12 pb-4">
@@ -221,53 +269,61 @@ function Template(props: ProjectProps) {
                         {/* First Row */}
                         <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-7">
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="535"
-                                    height="200"
-                                    src={props.gallery.image1}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image1);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image1}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
 
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="535"
-                                    height="200"
-                                    src={props.gallery.image2}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image2);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image2}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
                         </div>
                         
                         {/* Second Row */}
                         <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-7">
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="535"
-                                    height="200"
-                                    src={props.gallery.image3}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image3);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image3}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
 
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="535"
-                                    height="200"
-                                    src={props.gallery.image4}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image4);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image4}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
                         </div>
                     </div>
                     
                     {/* Video */}
                     <div className="w-[1100px] h-fit pt-4">
-                        <div>
+                        <div className="shadow-md">
                             <CldVideoPlayer
                                 width="1920"
                                 height="1080"
@@ -333,6 +389,8 @@ function ProjectTabMobile(href : string, image : string, title : string, alt : s
       <Link href={href}>
           <div className={"w-full h-fit border-t bg-opacity-5 bg-slate-100 border-[#979797] hover:bg-opacity-10 " + last}>
   
+
+
             <div className="w-full h-full flex flex-col items-center justify-center pt-4">
               <div className="pt-2">
                 <p className="text-2xl font-josefin text-white text-center">
@@ -388,33 +446,81 @@ function ContentTextMobile(title : string, content : string) {
     )
 }
 
-function ContentImageMobile(image : string, justify : string) {
-    return (
-        // Image
-        <div className={"flex pt-5 " + justify}>
-            <CldImage className="rounded-xl"
-                width="1000"
-                height="10"
-                src={image}
-                sizes="100vw"
-                alt=""
-            />
-        </div>
-    )
-}
-
-function ContentTabMobile(image : string, title : string, content : string) {
-    return (
-        <div className="bg-slate-600 bg-opacity-20 w-full fit flex justify-center flex-wrap">
-            {ContentTextMobile(title, content)}
-            {ContentImageMobile(image, "justify-begin")}
-        </div>
-    )
-}
-
 function TemplateMobile(props: ProjectProps) {
+    const [selectedImage, setSelectedImage] = useState("");
+    const [showFullscreenImage, setShowFullscreenImage] = useState(false);
+    
+    const toggleFullscrenImage = (image : string) => {
+        setSelectedImage(image);
+        setShowFullscreenImage(!showFullscreenImage);
+        if (showFullscreenImage) {
+            document.body.style.overflow = "auto";
+        } else {
+            document.body.style.overflow = "hidden";
+        }
+    };
+
+    const ContentImageMobile = (image : string, justify : string) => {
+        return (
+            // Image
+            <div className={"flex pt-5 " + justify}>
+                <button onClick={() => {toggleFullscrenImage(image)}}>
+                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                        width="1000"
+                        height="10"
+                        src={image}
+                        sizes="100vw"
+                        alt=""
+                    />
+                </button>
+            </div>
+        )
+    }
+
+    const ContentTabMobile = (image : string, title : string, content : string) => {
+        return (
+            <div className="bg-slate-600 bg-opacity-20 w-full fit flex justify-center flex-wrap">
+                {ContentTextMobile(title, content)}
+                {ContentImageMobile(image, "justify-begin")}
+            </div>
+        )
+    }
+
     return (
         <div className="w-full h-fit flex flex-col items-center">
+
+            {/* Fullscreen Image */}
+            <div className={showFullscreenImage ? "sticky top-0 bg-black bg-opacity-90 w-full h-screen flex z-50" : "hidden"}>
+                <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen"/>
+
+                {/* Image */}
+                <div className="w-[73%] h-screen">
+                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+
+                    <div className="w-full h-[84%] flex justify-center items-center">
+                        <div>
+                            <CldImage className=""
+                                width="1400"
+                                height="200"
+                                src={selectedImage}
+                                sizes="100vw"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+
+                    <div onClick={() => {toggleFullscrenImage("")}} className="w-full h-[8%]"/>
+                </div>
+
+                {/* Exit Button */}
+                <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen">
+                    <div className="w-full h-[20%] flex justify-center items-center">
+                        <button onClick={() => {toggleFullscrenImage("");}}>
+                            <TfiClose className="size-10 fill-white opacity-20 transition-all hover:opacity-100"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             {/* Header */}
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit flex flex-col items-center pt-12 pb-4">
@@ -483,42 +589,50 @@ function TemplateMobile(props: ProjectProps) {
 
                         <div className="w-full h-1/2 space-y-5 flex flex-wrap justify-center">
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="1000"
-                                    height="200"
-                                    src={props.gallery.image1}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image1);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image1}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
 
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="1000"
-                                    height="200"
-                                    src={props.gallery.image2}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image2);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image2}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="1000"
-                                    height="200"
-                                    src={props.gallery.image3}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image3);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image3}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
 
                             <div>
-                                <CldImage className="rounded-xl"
-                                    width="1000"
-                                    height="200"
-                                    src={props.gallery.image4}
-                                    sizes="100vw"
-                                    alt=""
-                                />
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image4);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image4}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
                             </div>
                         </div>
                     </div>
