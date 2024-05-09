@@ -170,7 +170,7 @@ function Template(props: ProjectProps) {
         <div className="w-full h-fit flex flex-col items-center">
             
             {/* Fullscreen Image */}
-            <div className={showFullscreenImage ? "sticky top-0 bg-black bg-opacity-90 w-full h-screen flex z-50" : "hidden"}>
+            <div className={showFullscreenImage ? "fixed top-0 bg-black bg-opacity-90 w-full h-screen flex z-50" : "hidden"}>
                 <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen"/>
 
                 {/* Image */}
@@ -488,7 +488,7 @@ function TemplateMobile(props: ProjectProps) {
         <div className="w-full h-fit flex flex-col items-center">
 
             {/* Fullscreen Image */}
-            <div className={showFullscreenImage ? "sticky top-0 bg-black bg-opacity-90 w-full h-screen flex z-50" : "hidden"}>
+            <div className={showFullscreenImage ? "fixed top-0 bg-black bg-opacity-90 w-full h-screen flex z-50" : "hidden"}>
                 <div onClick={() => {toggleFullscrenImage("")}} className="w-[13.5%] h-screen"/>
 
                 {/* Image */}
