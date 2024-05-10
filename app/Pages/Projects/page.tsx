@@ -147,7 +147,7 @@ function Projects() {
           )}
 
           {/* 2 */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/Abducted",
           "Projects/Abducted/Thumbnail",
           "Abducted", 
           "Puzzle",

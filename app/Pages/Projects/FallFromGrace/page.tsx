@@ -46,7 +46,7 @@ const projectProps: ProjectProps = {
 
     projects: [
         {
-            link: "/Pages/Projects/TheTravelings",
+            link: "/Pages/Projects/Abducted",
             image: "Projects/Abducted/Thumbnail",
             title: "Abducted",
             genre: "Puzzle",
