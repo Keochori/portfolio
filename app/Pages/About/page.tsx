@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import Portrait from "@/app/Files/portrait.png";
+import Portrait from "/public/portrait.png";
 import Link from "next/link";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa6";
