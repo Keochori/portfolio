@@ -70,7 +70,7 @@ function Projects() {
           </h1>
 
           {/* Abaddon */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/Abaddon",
           "Projects/Abaddon/Placeholder1",
           "Abaddon", 
           "3D Game Engine",
@@ -78,11 +78,11 @@ function Projects() {
           )}
 
           {/* Portfolio */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/Portfolio",
           "Projects/Portfolio/ThumbnailE",
           "Portfolio", 
           "Website",
-          "My portfolio website is programmed using Next.js and Tailwind CSS. Click here to learn more."
+          "My portfolio website is programmed using Next.js, Tailwind CSS and deployed by Vercel. Click here to learn more."
           ,"border-b", "pl-1")}
 
           {/* TGA */}
@@ -91,7 +91,7 @@ function Projects() {
           </h1>
           
           {/* Specialization */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/ProceduralGeneration",
           "Projects/ProceduralGeneration/Thumbnail",
           "Procedural Generation", 
           "Specialization",
@@ -99,7 +99,7 @@ function Projects() {
           , "", "pl-3")}
           
           {/* 8 */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/ViperTrace",
           "Projects/ViperTrace/Thumbnail",
           "Viper Trace", 
           "FPS Survival",
@@ -107,7 +107,7 @@ function Projects() {
           , "", "pl-3")}
 
           {/* 7 */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/Ekaya",
           "Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
           "Ekaya & Pebbles: A Helping Hand", 
           "Third Person Adventure",
@@ -115,15 +115,15 @@ function Projects() {
           )}
 
           {/* 6 */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/Spite",
           "Projects/SpiteTheYellowPlague/Thumbnail",
           "Spite: The Yellow Plague", 
-          "Dungeon Crawler",
-          "Spite: The Yellow Plague is a dungeon crawler created by a group of TGA students using their own custom game engine. Click here to learn more."
+          "Hack 'n Slash",
+          "Spite: The Yellow Plague is a Hack 'n Slash created by a group of TGA students using their own custom game engine. Click here to learn more."
           )}
 
           {/* 5 */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/BardKnight",
           "Projects/BardKnight/Thumbnail",
           "Bard Knight", 
           "Platformer",
@@ -155,7 +155,7 @@ function Projects() {
           )}
 
           {/* 1 */}
-          {Tab("/Pages/Projects/TheTravelings",
+          {Tab("/Pages/Projects/PotionRun",
           "Projects/PotionRun/Thumbnail",
           "Potion Run", 
           "Endless Runner",

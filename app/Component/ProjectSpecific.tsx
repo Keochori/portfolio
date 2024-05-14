@@ -9,8 +9,9 @@ import { TfiClose } from "react-icons/tfi";
 
 
 interface ProjectTabProps {
+    image: boolean;
     left: boolean;
-    image: string;
+    url: string;
     title: string;
     content: string;
   }
@@ -35,9 +36,7 @@ export interface ProjectProps {
     title: string;
     genre: string;
 
-    platform: string;
-    engine: string;
-    contributions: string;
+    details: string[];
   
     tabs: ProjectTabProps[];
     gallery: ProjectGalleryProps;
@@ -129,28 +128,56 @@ function Template(props: ProjectProps) {
         }
     };
 
-    const ContentImage = (image : string, justify : string) => {
-        return (
-            // Image
-            <div className={"w-[1600px] h-full flex " + justify}>
-                <button onClick={() => {toggleFullscrenImage(image)}}>
-                    <CldImage className="rounded-xl transition-all hover:opacity-70"
-                        width="710"
-                        height="200"
-                        src={image}
-                        sizes="100vw"
-                        alt=""
-                    />
-                </button>
-            </div>
+    const Detail = (content : string) => {
+        return (           
+            <div>
+                <p className="font-josefin text-2xl text-[#979797]">
+                    {content}
+                </p>
+            </div>     
         )
     }
 
-    const ContentTab = (left : boolean, image : string, title : string, content : string) => {
+    const ContentImage = (image : boolean, url : string, justify : string) => {
+        if (image) 
+        {
+            return (
+                // Image
+                <div className={"w-[1600px] h-full flex " + justify}>
+                    <button onClick={() => {toggleFullscrenImage(url)}}>
+                        <CldImage className="rounded-xl transition-all hover:opacity-70"
+                            width="710"
+                            height="200"
+                            src={url}
+                            sizes="100vw"
+                            alt=""
+                        />
+                    </button>
+                </div>
+            )
+        } else 
+        {
+            return (
+                // Video
+                <div className={"w-[1600px] flex " + justify}>
+                    <div className="h-fit w-[711px]">
+                        <CldVideoPlayer className="rounded-xl"
+                            width={1920}
+                            height={1080}
+                            controls={true}
+                            src="Projects/EkayaAndPebblesAHelpingHand/Trailer"
+                        />
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    const ContentTab = (image : boolean, left : boolean, url : string, title : string, content : string) => {
         if (left) {
             return (
                 <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
-                    {ContentImage(image, "justify-end")}
+                    {ContentImage(image, url, "justify-end")}
                     {ContentText(title, content)}
                 </div>
             )
@@ -160,7 +187,7 @@ function Template(props: ProjectProps) {
             return (
                 <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
                     {ContentText(title, content)}
-                    {ContentImage(image, "justify-begin")}
+                    {ContentImage(image, url, "justify-begin")}
                 </div>
             )
         }
@@ -216,20 +243,9 @@ function Template(props: ProjectProps) {
 
             {/* Details */}
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit text-center flex items-center flex-col pb-10">
-                {/* Platform */}
-                <p className="font-josefin text-2xl text-[#979797]">
-                    Platform: {props.platform}
-                </p>
-
-                {/* Engine */}
-                <p className="font-josefin text-2xl text-[#979797]">
-                    Engine: {props.engine}
-                </p>
-
-                {/* Contribution */}
-                <p className="font-josefin text-2xl text-[#979797]">
-                    Contributions: {props.contributions}
-                </p>
+                {props.details.map((detail) => {
+                    return Detail(detail)
+                })}
 
                 {/* Separator Line */}
                 <div className="bg-gray-700 w-[600px] h-[2px] rounded-xl">
@@ -239,7 +255,7 @@ function Template(props: ProjectProps) {
             {/* Content */}
             <div className="w-full h-fit pt-20 space-y-20 pb-20">
                 {props.tabs.map((tab) => {
-                    return ContentTab(tab.left, tab.image, tab.title, tab.content)
+                    return ContentTab(tab.image, tab.left, tab.url, tab.title, tab.content)
                 })}
             </div>
 
@@ -458,28 +474,55 @@ function TemplateMobile(props: ProjectProps) {
         }
     };
 
-    const ContentImageMobile = (image : string, justify : string) => {
+    const Detail = (content : string) => {
         return (
-            // Image
-            <div className={"flex pt-5 " + justify}>
-                <button onClick={() => {toggleFullscrenImage(image)}}>
-                    <CldImage className="rounded-xl transition-all hover:opacity-70"
-                        width="1000"
-                        height="10"
-                        src={image}
-                        sizes="100vw"
-                        alt=""
-                    />
-                </button>
-            </div>
+            <p className="font-josefin text-2xl text-[#979797]">
+                {content}
+            </p>
         )
     }
 
-    const ContentTabMobile = (image : string, title : string, content : string) => {
+    const ContentImageMobile = (image : boolean, url : string, justify : string) => {
+        if (image) 
+        {
+            return (
+                // Image
+                <div className={"flex pt-5 " + justify}>
+                    <button onClick={() => {toggleFullscrenImage(url)}}>
+                        <CldImage className="rounded-xl transition-all hover:opacity-70"
+                            width="1000"
+                            height="10"
+                            src={url}
+                            sizes="100vw"
+                            alt=""
+                        />
+                    </button>
+                </div>
+            )
+        }
+        else 
+        {
+            return (
+                // Video
+                <div className={"w-full flex justify-center pt-5 " + justify}>
+                    <div className="h-fit w-full">
+                        <CldVideoPlayer className="rounded-xl"
+                            width={1920}
+                            height={1080}
+                            controls={true}
+                            src="Projects/EkayaAndPebblesAHelpingHand/Trailer"
+                        />
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    const ContentTabMobile = (image : boolean, url : string, title : string, content : string) => {
         return (
             <div className="bg-slate-600 bg-opacity-20 w-full fit flex justify-center flex-wrap">
                 {ContentTextMobile(title, content)}
-                {ContentImageMobile(image, "justify-begin")}
+                {ContentImageMobile(image, url, "justify-begin")}
             </div>
         )
     }
@@ -535,20 +578,9 @@ function TemplateMobile(props: ProjectProps) {
             {/* Details */}
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit text-center flex items-center flex-col pb-10 p-3">
 
-                {/* Platform */}
-                <p className="font-josefin text-2xl text-[#979797]">
-                    Platform: {props.platform}
-                </p>
-
-                {/* Engine */}
-                <p className="font-josefin text-2xl text-[#979797]">
-                    Engine: {props.engine}
-                </p>
-
-                {/* Contribution */}
-                <p className="font-josefin text-2xl text-[#979797]">
-                    Contributions: {props.contributions}
-                </p>
+                {props.details.map((detail) => {
+                    return Detail(detail)
+                })}
 
                 {/* Separator Line */}
                 <div className="bg-gray-700 w-[200px] h-[2px] rounded-xl">
@@ -558,7 +590,7 @@ function TemplateMobile(props: ProjectProps) {
             {/* Content */}
             <div className="w-full h-fit pt-20 space-y-20 pb-20">
                 {props.tabs.map((tab) => {
-                    return ContentTabMobile(tab.image, tab.title, tab.content)
+                    return ContentTabMobile(tab.image, tab.url, tab.title, tab.content)
                 })}
             </div>
 
