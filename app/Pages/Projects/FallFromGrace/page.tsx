@@ -17,7 +17,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/FallFromGrace/Cutscene",
             title: "What's Fall From Grace?",
-            content: "Fall From Grace is a 2D shoot 'em up created by a group of TGA (The Game Assembly) students using the TGA Engine. The story follows Lucifer, an angel turned evil seeking revenge against his father who exiled him. To get there, he must first fight his way through hell and heaven.",
+            content: "Fall From Grace is a 2D shoot 'em up for PC created by a group of TGA (The Game Assembly) students using the TGA Engine. The story follows Lucifer, an angel turned evil seeking revenge against his father who exiled him. To get there, he must first fight his way through hell and heaven.",
         },
         {
             image: true,
@@ -43,6 +43,7 @@ const projectProps: ProjectProps = {
     ],
 
     gallery: {
+        include: true,
         image1: "Projects/FallFromGrace/G2",
         image2: "Projects/FallFromGrace/G3",
         image3: "Projects/FallFromGrace/G1",

@@ -43,6 +43,7 @@ const projectProps: ProjectProps = {
     ],
 
     gallery: {
+        include: true,
         image1: "Projects/TheTravelings/G3",
         image2: "Projects/TheTravelings/G2",
         image3: "Projects/TheTravelings/G1",

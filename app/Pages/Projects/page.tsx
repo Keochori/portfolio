@@ -71,7 +71,7 @@ function Projects() {
 
           {/* Abaddon */}
           {Tab("/Pages/Projects/Abaddon",
-          "Projects/Abaddon/Placeholder1",
+          "Projects/Abaddon/Thumb",
           "Abaddon", 
           "3D Game Engine",
           "Abaddon is my 3D Game Engine programmed using C++ and the DirectX library. Click here to learn more."
@@ -95,7 +95,7 @@ function Projects() {
           "Projects/ProceduralGeneration/Thumbnail",
           "Procedural Generation", 
           "Specialization",
-          "For my specialization project at The Game Assembly, I chose to learn more about procedural generation. The engine I chose to work in was Unreal Engine. Click here to learn more."
+          "For my specialization project at The Game Assembly, I chose to learn more about procedural generation. The engine I chose to work in was Unreal Engine 5. Click here to learn more."
           , "", "pl-3")}
           
           {/* 8 */}
@@ -224,15 +224,15 @@ function ProjectsMobile() {
       </h1>
 
       {/* Abaddon */}
-      {TabMobile("/Pages/Projects/TheTravelings",
-      "Projects/Abaddon/Placeholder1",
+      {TabMobile("/Pages/Projects/Abaddon",
+      "Projects/Abaddon/Thumb",
       "Abaddon", 
       "3D Game Engine",
       "Abaddon is my 3D Game Engine programmed using C++ and the DirectX library. Click here to learn more."
       )}
 
       {/* Portfolio */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/Portfolio",
       "Projects/Portfolio/ThumbnailE",
       "Portfolio", 
       "Website",
@@ -245,15 +245,15 @@ function ProjectsMobile() {
       </h1>
       
       {/* Specialization */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/ProceduralGeneration",
       "Projects/ProceduralGeneration/Thumbnail",
       "Procedural Generation", 
       "Specialization",
-      "For my specialization project at The Game Assembly, I chose to learn more about procedural generation. The engine I chose to work in was Unreal Engine. Click here to learn more."
+      "For my specialization project at The Game Assembly, I chose to learn more about procedural generation. The engine I chose to work in was Unreal Engine 5. Click here to learn more."
       , "", "pl-3")}
       
       {/* 8 */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/ViperTrace",
       "Projects/ViperTrace/Thumbnail",
       "Viper Trace", 
       "FPS Survival",
@@ -261,7 +261,7 @@ function ProjectsMobile() {
       , "", "pl-3")}
 
       {/* 7 */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/Ekaya",
       "Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
       "Ekaya & Pebbles: A Helping Hand", 
       "Third Person Adventure",
@@ -269,7 +269,7 @@ function ProjectsMobile() {
       )}
 
       {/* 6 */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/Spite",
       "Projects/SpiteTheYellowPlague/Thumbnail",
       "Spite: The Yellow Plague", 
       "Dungeon Crawler",
@@ -277,7 +277,7 @@ function ProjectsMobile() {
       )}
 
       {/* 5 */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/BardKnight",
       "Projects/BardKnight/Thumbnail",
       "Bard Knight", 
       "Platformer",
@@ -293,7 +293,7 @@ function ProjectsMobile() {
       , "", "pl-3")}
 
       {/* 3 */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/FallFromGrace",
       "Projects/FallFromGrace/Thumbnail",
       "Fall From Grace", 
       "Schmup",
@@ -301,7 +301,7 @@ function ProjectsMobile() {
       )}
 
       {/* 2 */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/Abducted",
       "Projects/Abducted/Thumbnail",
       "Abducted", 
       "Puzzle",
@@ -309,7 +309,7 @@ function ProjectsMobile() {
       )}
 
       {/* 1 */}
-      {TabMobile("/Pages/Projects/TheTravelings",
+      {TabMobile("/Pages/Projects/PotionRun",
       "Projects/PotionRun/Thumbnail",
       "Potion Run", 
       "Endless Runner",

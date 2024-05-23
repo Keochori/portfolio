@@ -17,6 +17,7 @@ interface ProjectTabProps {
   }
 
   interface ProjectGalleryProps {
+    include: boolean;
     image1: string;
     image2: string;
     image3: string;
@@ -128,6 +129,99 @@ function Template(props: ProjectProps) {
         }
     };
 
+    const Gallery = (include : boolean) => {
+        if (include) 
+        {
+            return (
+                <div className="bg-slate-600 bg-opacity-20 w-[1250px] h-fit flex flex-wrap justify-center pb-16 rounded-3xl">
+        
+                    {/* Text */}
+                    <div className="w-[1200px] h-fit flex flex-col items-center space-y-1 p-12 pb-5">
+                        <div className="w-full h-fit flex justify-center">
+                            <p className="font-josefin text-5xl text-white">
+                                Gallery & Trailer
+                            </p>
+                        </div>
+        
+                        <div className="bg-gray-700 w-[300px] h-[2px] rounded-xl">
+        
+                        </div>
+                    </div>
+        
+                    {/* Pictures */}
+                    <div className="w-[1200px] h-[650px]">
+        
+                        {/* First Row */}
+                        <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-7">
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image1);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image1}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+        
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image2);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image2}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        
+                        {/* Second Row */}
+                        <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-7">
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image3);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image3}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+        
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image4);}}>
+                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
+                                        width="535"
+                                        height="200"
+                                        src={props.gallery.image4}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Video */}
+                    <div className="w-[1100px] h-fit pt-4">
+                        <div className="shadow-md">
+                            <CldVideoPlayer
+                                width="1920"
+                                height="1080"
+                                src={props.gallery.trailer}
+                                logo={false}
+                            />
+                        </div>
+                    </div>
+                </div>
+            )
+            }
+    }
+
     const Detail = (content : string) => {
         return (           
             <div>
@@ -165,7 +259,7 @@ function Template(props: ProjectProps) {
                             width={1920}
                             height={1080}
                             controls={true}
-                            src="Projects/EkayaAndPebblesAHelpingHand/Trailer"
+                            src={url}
                         />
                     </div>
                 </div>
@@ -261,92 +355,7 @@ function Template(props: ProjectProps) {
 
             <div className="w-full h-full flex flex-wrap justify-center space-y-14">
 
-                {/* Gallery */}
-                <div className="bg-slate-600 bg-opacity-20 w-[1250px] h-fit flex flex-wrap justify-center pb-16 rounded-3xl">
-
-                    {/* Text */}
-                    <div className="w-[1200px] h-fit flex flex-col items-center space-y-1 p-12 pb-5">
-                        <div className="w-full h-fit flex justify-center">
-                            <p className="font-josefin text-5xl text-white">
-                                Gallery & Trailer
-                            </p>
-                        </div>
-
-                        <div className="bg-gray-700 w-[300px] h-[2px] rounded-xl">
-
-                        </div>
-                    </div>
-
-                    {/* Pictures */}
-                    <div className="w-[1200px] h-[650px]">
-
-                        {/* First Row */}
-                        <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-7">
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image1);}}>
-                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
-                                        width="535"
-                                        height="200"
-                                        src={props.gallery.image1}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image2);}}>
-                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
-                                        width="535"
-                                        height="200"
-                                        src={props.gallery.image2}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-                        </div>
-                        
-                        {/* Second Row */}
-                        <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-7">
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image3);}}>
-                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
-                                        width="535"
-                                        height="200"
-                                        src={props.gallery.image3}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image4);}}>
-                                    <CldImage className="rounded-xl shadow-md transition-all hover:opacity-70"
-                                        width="535"
-                                        height="200"
-                                        src={props.gallery.image4}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    {/* Video */}
-                    <div className="w-[1100px] h-fit pt-4">
-                        <div className="shadow-md">
-                            <CldVideoPlayer
-                                width="1920"
-                                height="1080"
-                                src={props.gallery.trailer}
-                                logo={false}
-                            />
-                        </div>
-                    </div>
-                </div>
+                {Gallery(props.gallery.include)}
 
                 {/* Other Projects */}
                 <div className="bg-[#151c27] w-full h-fit">
@@ -474,6 +483,93 @@ function TemplateMobile(props: ProjectProps) {
         }
     };
 
+    const Gallery = (include : boolean) => {
+        if (include) {
+            return (
+                <div className="bg-slate-600 bg-opacity-20 w-full h-fit flex flex-wrap justify-center">
+
+                    {/* Text */}
+                    <div className="w-fit h-fit flex flex-col items-center space-y-1 p-9 pb-4">
+                        <div className="w-full h-fit flex justify-center">
+                            <p className="font-josefin text-4xl text-white">
+                                Gallery & Trailer
+                            </p>
+                        </div>
+
+                        <div className="bg-gray-700 w-[230px] h-[2px] rounded-xl">
+
+                        </div>
+                    </div>
+
+                    {/* Pictures */}
+                    <div className="w-full h-fit pt-3">
+
+                        <div className="w-full h-1/2 space-y-5 flex flex-wrap justify-center">
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image1);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image1}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image2);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image2}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image3);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image3}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div>
+                                <button onClick={() => {toggleFullscrenImage(props.gallery.image4);}}>
+                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
+                                        width="1000"
+                                        height="200"
+                                        src={props.gallery.image4}
+                                        sizes="100vw"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Video */}
+                    <div className="w-[1100px] h-fit pt-4">
+                        <div>
+                            <CldVideoPlayer
+                                width="1920"
+                                height="1080"
+                                src={props.gallery.trailer}
+                                logo={false}
+                            />
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+    }
+
     const Detail = (content : string) => {
         return (
             <p className="font-josefin text-2xl text-[#979797]">
@@ -510,7 +606,7 @@ function TemplateMobile(props: ProjectProps) {
                             width={1920}
                             height={1080}
                             controls={true}
-                            src="Projects/EkayaAndPebblesAHelpingHand/Trailer"
+                            src={url}
                         />
                     </div>
                 </div>
@@ -596,88 +692,8 @@ function TemplateMobile(props: ProjectProps) {
 
             <div className="w-full h-full flex flex-wrap justify-center space-y-14">
 
-                {/* Gallery */}
-                <div className="bg-slate-600 bg-opacity-20 w-full h-fit flex flex-wrap justify-center">
-
-                    {/* Text */}
-                    <div className="w-fit h-fit flex flex-col items-center space-y-1 p-9 pb-4">
-                        <div className="w-full h-fit flex justify-center">
-                            <p className="font-josefin text-4xl text-white">
-                                Gallery & Trailer
-                            </p>
-                        </div>
-
-                        <div className="bg-gray-700 w-[230px] h-[2px] rounded-xl">
-
-                        </div>
-                    </div>
-
-                    {/* Pictures */}
-                    <div className="w-full h-fit pt-3">
-
-                        <div className="w-full h-1/2 space-y-5 flex flex-wrap justify-center">
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image1);}}>
-                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
-                                        width="1000"
-                                        height="200"
-                                        src={props.gallery.image1}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image2);}}>
-                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
-                                        width="1000"
-                                        height="200"
-                                        src={props.gallery.image2}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image3);}}>
-                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
-                                        width="1000"
-                                        height="200"
-                                        src={props.gallery.image3}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-
-                            <div>
-                                <button onClick={() => {toggleFullscrenImage(props.gallery.image4);}}>
-                                    <CldImage className="rounded-xl transition-all hover:opacity-70"
-                                        width="1000"
-                                        height="200"
-                                        src={props.gallery.image4}
-                                        sizes="100vw"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    {/* Video */}
-                    <div className="w-[1100px] h-fit pt-4">
-                        <div>
-                            <CldVideoPlayer
-                                width="1920"
-                                height="1080"
-                                src={props.gallery.trailer}
-                                logo={false}
-                            />
-                        </div>
-                    </div>
-                </div>
-
+                {Gallery(props.gallery.include)}
+                
                 {/* Other Projects */}
                 <div className="bg-[#151c27] w-full h-fit">
 
