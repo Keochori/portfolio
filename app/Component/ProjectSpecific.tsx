@@ -58,7 +58,7 @@ export default function Page(props: ProjectProps) {
 function ProjectTab(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
     return (
       <Link href={href}>
-        <div className={"flex flex-row w-full h-[200px] hover:h-[210px] transition-all overflow-hidden grayscale hover:grayscale-0 " + last}>
+        <div className={"bg-opacity-5 bg-slate-400 flex flex-row w-full h-[200px] hover:h-[210px] transition-all overflow-hidden grayscale hover:grayscale-0 hover:bg-slate-300 hover:bg-opacity-10 " + last}>
           
           {/* Image */}
           <div className="h-full w-[300px]">
@@ -77,7 +77,7 @@ function ProjectTab(href : string, image : string, title : string, alt : string,
           </div>
   
           {/* Text */}
-          <div className="bg-opacity-5 bg-slate-400 w-[450px] h-full flex flex-col items-center justify-center p-8">
+          <div className="w-[450px] h-full flex flex-col items-center justify-center p-8">
             <div className="">
               <h1 className="text-2xl font-josefin text-white">
                 {title}
@@ -411,7 +411,7 @@ function Template(props: ProjectProps) {
 function ProjectTabMobile(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
     return (
       <Link href={href}>
-          <div className={"w-full h-fit border-t bg-opacity-5 bg-slate-100 border-[#979797] hover:bg-opacity-10 " + last}>
+          <div className={"w-full h-fit border-t-2 bg-opacity-5 bg-slate-100 border-[#000000] hover:bg-opacity-10 " + last}>
   
 
 

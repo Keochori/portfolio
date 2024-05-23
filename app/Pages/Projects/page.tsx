@@ -16,7 +16,7 @@ export default function ProjectsPage() {
 function Tab(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
   return (
     <Link href={href}>
-      <div className={"flex flex-row w-full h-[200px] hover:h-[210px] transition-all overflow-hidden grayscale border-t border-[#979797] hover:grayscale-0 " + last}>
+      <div className={"bg-slate-400 bg-opacity-5 flex flex-row w-full h-[200px] hover:h-[210px] transition-all overflow-hidden grayscale border-t border-[#000000] hover:grayscale-0 hover:bg-slate-300 hover:bg-opacity-10 " + last}>
         
         {/* Image */}
         <div className="h-full w-[300px]">
@@ -35,7 +35,7 @@ function Tab(href : string, image : string, title : string, alt : string, conten
         </div>
 
         {/* Text */}
-        <div className="bg-opacity-5 bg-slate-400 h-full w-[450px] flex flex-col items-center justify-center p-8">
+        <div className="h-full w-[450px] flex flex-col items-center justify-center p-8">
           <div className="">
             <h1 className="text-2xl font-josefin text-white">
               {title}
@@ -172,7 +172,7 @@ function Projects() {
 function TabMobile(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
   return (
     <Link href={href}>
-        <div className={"w-full h-fit border-t bg-opacity-5 bg-slate-100 border-[#979797] hover:bg-opacity-10 " + last}>
+        <div className={"w-full h-fit border-t-2 bg-opacity-5 bg-slate-100 border-[#000000] hover:bg-opacity-10 " + last}>
 
           <div className="w-full h-full flex flex-col items-center justify-center pt-4">
             <div className="pt-2">
@@ -237,7 +237,7 @@ function ProjectsMobile() {
       "Portfolio", 
       "Website",
       "My portfolio website is programmed using Next.js and Tailwind CSS. Click here to learn more."
-      ,"border-b", "pl-1")}
+      ,"border-b-2", "pl-1")}
 
       {/* TGA */}
       <h1 className="underline font-josefin text-white text-2xl pb-3 pt-14 text-center">
@@ -314,7 +314,7 @@ function ProjectsMobile() {
       "Potion Run", 
       "Endless Runner",
       "Potion Run is an endless runner created by a group of TGA students using the Unity Game Engine. Click here to learn more."
-      , "border-b")}
+      , "border-b-2")}
     </div> 
   )
 }
