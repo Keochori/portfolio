@@ -36,10 +36,14 @@ export default function Header() {
       <div className="flex justify-center items-center py-8">
 
         {/* Projects button */}
-        {GetProjectsButton()}
+        <div className="w-[120px] h-fit flex justify-center">
+          {GetProjectsButton()}
+        </div>
 
         {/* About button */}
-        {GetAboutButton()}
+        <div className="w-[120px] h-fit flex justify-center">
+          {GetAboutButton()}
+        </div>
 
       </div>
     </div>
