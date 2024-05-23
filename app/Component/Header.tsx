@@ -41,7 +41,7 @@ export default function Header() {
         </div>
 
         {/* About button */}
-        <div className="w-[120px] h-fit flex justify-center">
+        <div className="w-[120px] h-fit flex justify-center pr-2">
           {GetAboutButton()}
         </div>
 
