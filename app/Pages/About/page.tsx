@@ -4,6 +4,7 @@ import Portrait from "/public/portrait.png";
 import Link from "next/link";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa6";
+import { FaGithubSquare } from "react-icons/fa";
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
@@ -16,17 +17,66 @@ export default function AboutPage() {
   }
 }
 
+enum IconType {
+  LinkedIn,
+  Github,
+  CV,
+}
+
+function Icon(type : IconType) {
+  switch(type) {
+    case IconType.LinkedIn:
+      return ( <FaLinkedin className="size-8 fill-slate-300 group-hover:fill-black transition-all"/>)
+
+    case IconType.Github:
+      return ( <FaGithubSquare className="size-8 fill-slate-300 group-hover:fill-black transition-all"/>)
+
+    case IconType.CV:
+      return (
+        <p className="text-2xl font-bold text-slate-300 group-hover:text-black transition-all">
+          CV
+        </p>
+      )
+  }
+}
+
+function Tab(css : string, type : IconType, href : string, file : string = "") {
+  const Content = () => {
+    return (
+      <div className={"group w-full h-full bg-slate-900 hover:bg-white transition-all flex justify-center items-center shadow-md " + css}>
+        <div>
+            {Icon(type)}
+        </div>
+      </div>
+    )
+  }
+
+  if (href == "file") {
+    return (
+      <a href={"../cv.pdf"} target="_blank" rel="noopener noreferrer">
+        {Content()}
+      </a>
+    )
+  } else {
+    return (
+      <Link href={href}>
+        {Content()}
+      </Link>
+    )
+  }
+}
+
 function About() {
   return (
     <div className="flex justify-center">
       <div className="w-[600px] h-[260px] flex flex-wrap justify-center items-center">
 
         {/* Text Box */}
-        <div className="w-[600px] h-[260px] flex">
+        <div className="w-fit h-fit flex pr-7 pl-2">
 
           {/* Content */}
-          <div className=" w-[450px] h-[300px]">
-            <p className="font-josefin text-slate-400 text-xl pl-3">
+          <div className="w-[324px] h-fit">
+            <p className="font-josefin text-slate-400 text-xl pl-[21px]">
               Hi! My name is Mateusz Salaga and I am a 22 year old video game
               programmer from sweden.
             </p>
@@ -47,70 +97,39 @@ function About() {
           </div>
 
           {/* Image box */}
-          <div className="px-10 grayscale">
+          <div className="pl-8 grayscale">
             <Image
               className=" rounded-xl"
               src={Portrait}
-              width={300}
-              height={300}
+              width={210}
+              height={100}
               alt="Picture of the author"
             />
           </div>
         </div>
 
         {/* Contacts Box */}
-        <div className="w-[600px] h-[60px] flex">
+        <div className="space-y-6 pt-10 flex flex-col justify-center items-center">
 
-          {/* Email */}
-          <div className="w-[200px] h-[60px]  flex flex-wrap">
-            <div className="w-full h-[30px] flex justify-center items-center">
-              <MdOutlineMail className=" size-6 fill-[#d1c876]"/>
+          {/* Tabs */}
+          <div className="w-[546px] h-[50px] grid grid-cols-3">
+            {Tab("border-r-2 border-[#080f1a] rounded-l-xl", IconType.LinkedIn, "https://www.linkedin.com/in/mateuszsalaga/")}
+            {Tab("",                                         IconType.Github, "https://github.com/Keochori")}
+            {Tab("border-l-2 border-[#080f1a] rounded-r-xl", IconType.CV, "file", "/cv.pdf")}
+          </div>
+          
+          {/* Mail Tab */}
+          <div className="bg-slate-900 bg-opacity-50 w-fit flex justify-center items-center p-3 pt-4 rounded-xl space-x-2">
+            <div className="pb-1">
+              <MdOutlineMail className="size-5 fill-slate-300" />
             </div>
-            <div className="w-full h-[30px] flex justify-center">
-              <p className="text-sm font-josefin text-[#979797]">
+            <div>
+              <p className="text-[18px] font-josefin text-slate-300">
                 MatSalaga@hotmail.com
               </p>
             </div>
           </div>
 
-          {/* LinkedIn */}
-          <div className="w-[250px] h-[60px] flex flex-wrap">
-            <div className="w-full h-[30px] flex justify-center items-center">
-              <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
-                <FaLinkedin className=" size-6 fill-[#d1c876] hover:fill-[#a39c5c]"/>
-              </Link>
-            </div>
-            <div className="w-full h-[30px] flex justify-center">
-              <Link className="text-decoration-line: underline text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all" href={'https://www.linkedin.com/in/mateuszsalaga/'}>
-                linkedin.com/in/mateuszsalaga
-              </Link>
-            </div>
-          </div>
-
-          {/* CV */}
-          <div className="w-[110px] h-[60px]  flex flex-wrap">
-            <div className="w-full h-[30px] flex justify-center items-center">
-              <a href="../cv.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                <p className="size-5 font-bold text-center text-[#d1c876] hover:text-[#a39c5c]">
-                  CV
-                </p>
-              </a>
-            </div>
-            <div className="w-full h-[30px] flex justify-center">
-              <p className="text-sm font-josefin ">
-                <a href="../cv.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-decoration-line: underline text-sm font-josefin text-[#979797] hover:text-[#707070] transition-all"
-                >
-                    Click Here!
-                </a>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
