@@ -23,29 +23,29 @@ enum IconType {
   CV,
 }
 
-function Icon(type : IconType) {
+function Icon(type : IconType, css : string) {
   switch(type) {
     case IconType.LinkedIn:
-      return ( <FaLinkedin className="size-8 fill-slate-300 group-hover:fill-black transition-all"/>)
+      return ( <FaLinkedin className={"size-8 fill-slate-300 group-hover:fill-black transition-all " + css}/>)
 
     case IconType.Github:
-      return ( <FaGithubSquare className="size-8 fill-slate-300 group-hover:fill-black transition-all"/>)
+      return ( <FaGithubSquare className={"size-8 fill-slate-300 group-hover:fill-black transition-all " + css}/>)
 
     case IconType.CV:
       return (
-        <p className="text-2xl font-bold text-slate-300 group-hover:text-black transition-all">
+        <p className={"text-2xl font-bold text-slate-300 group-hover:text-black transition-all " + css}>
           CV
         </p>
       )
   }
 }
 
-function Tab(css : string, type : IconType, href : string, file : string = "") {
+function Tab(css : string, type : IconType, href : string, file : string = "", mobile : string = "") {
   const Content = () => {
     return (
       <div className={"group w-full h-full bg-slate-900 hover:bg-white transition-all flex justify-center items-center shadow-md " + css}>
         <div>
-            {Icon(type)}
+            {Icon(type, mobile)}
         </div>
       </div>
     )
@@ -53,7 +53,7 @@ function Tab(css : string, type : IconType, href : string, file : string = "") {
 
   if (href == "file") {
     return (
-      <a href={"../cv.pdf"} target="_blank" rel="noopener noreferrer">
+      <a href={file} target="_blank" rel="noopener noreferrer">
         {Content()}
       </a>
     )
@@ -178,39 +178,34 @@ function AboutMobile() {
       </div>
 
       {/* Contacts Box */}
-      <div className="w-full h-full flex flex-wrap justify-center pt-10">
-
-        {/* Email */}
-        <div className="w-full h-fit p-8 bg-slate-900 border-t border-slate-800">
-          <div className="flex justify-center">
-            <MdOutlineMail className="size-12 fill-[#d1c876]"/>
-          </div>
-
-          <div className="flex justify-center">
-            <p className="text-xl font-josefin text-[#979797]">
-              MatSalaga@hotmail.com
-            </p>
-          </div>
-        </div>
+      <div className="w-full h-full flex flex-col justify-center pt-10">
 
         {/* LinkedIn */}
-        <div className="w-full h-fit flex justify-center p-8 bg-slate-900 border-t border-slate-800">
-            <Link href={'https://www.linkedin.com/in/mateuszsalaga/'}>
-              <FaLinkedin className=" size-20 fill-[#d1c876] hover:fill-[#a39c5c]"/>
-            </Link>
+        <div className="h-[90px]">
+          {Tab("border-t-2 border-[#080f1a]", IconType.LinkedIn, "https://www.linkedin.com/in/mateuszsalaga/", "", "[&&]:size-14")}
+        </div>
+
+        {/* Github */}
+        <div className="h-[90px]">
+          {Tab("border-t-2 border-[#080f1a]", IconType.Github, "https://github.com/Keochori", "", "[&&]:size-14")}
         </div>
 
         {/* CV */}
-        <div className="w-full h-fit p-8 bg-slate-900 border-t border-b border-slate-800">
-          <a  className="flex items-center justify-center"
-              href="../cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-            <p className="text-6xl font-bold text-[#d1c876] hover:text-[#a39c5c]">
-              CV
+        <div className="h-[90px]">
+          {Tab("border-t-2 border-[#080f1a]", IconType.CV, "file", "/cv.pdf", "[&&]:text-4xl")}
+        </div>
+
+        {/* Email */}
+        <div className="w-full h-[90px] p-8 bg-slate-900 border-t-2 border-[#080f1a] flex justify-center items-center">
+          <div className="pr-2 pb-[4px]">
+            <MdOutlineMail className="size-8 fill-slate-300"/>
+          </div>
+
+          <div className="">
+            <p className="text-xl font-josefin text-slate-300">
+              MatSalaga@hotmail.com
             </p>
-          </a>
+          </div>
         </div>
 
       </div>
