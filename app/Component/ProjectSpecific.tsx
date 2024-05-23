@@ -38,6 +38,7 @@ export interface ProjectProps {
     genre: string;
 
     details: string[];
+    separatorWidth: string;
   
     tabs: ProjectTabProps[];
     gallery: ProjectGalleryProps;
@@ -342,7 +343,7 @@ function Template(props: ProjectProps) {
                 })}
 
                 {/* Separator Line */}
-                <div className="bg-gray-700 w-[600px] h-[2px] rounded-xl">
+                <div className={"bg-gray-700 h-[2px] rounded-xl " + props.separatorWidth}>
                 </div>
             </div>
 

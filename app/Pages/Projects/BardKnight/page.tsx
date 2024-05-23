@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: UI Tool, UI, Menus, Input/Controls",
     ],
 
+    separatorWidth: "w-[450px]",
+
     tabs: [
         {
             image: true,

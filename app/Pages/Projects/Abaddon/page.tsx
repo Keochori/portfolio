@@ -8,6 +8,8 @@ const projectProps: ProjectProps = {
     details: [
     ],
 
+    separatorWidth: "w-[190px]",
+
     tabs: [
         {
             image: true,

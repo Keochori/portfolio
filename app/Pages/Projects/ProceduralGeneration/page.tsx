@@ -10,6 +10,8 @@ const projectProps: ProjectProps = {
         "Engine: Unreal Engine 5",
     ],
 
+    separatorWidth: "w-[220px]",
+
     tabs: [
         {
             image: true,

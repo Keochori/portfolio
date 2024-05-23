@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: Player Mechanics, Input/Controls, Animations",
     ],
 
+    separatorWidth: "w-[580px]",
+
     tabs: [
         {
             image: true,

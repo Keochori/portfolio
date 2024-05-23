@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: 3D Audio, FMOD, Soundtrack, SFX, Undo & Redo for Engine",
     ],
 
+    separatorWidth: "w-[750px]",
+
     tabs: [
         {
             image: true,

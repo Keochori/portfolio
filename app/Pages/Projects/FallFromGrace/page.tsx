@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: Bullet Pattern Generator Tool, Hell Boss, Soundtrack",
     ],
 
+    separatorWidth: "w-[640px]",
+
     tabs: [
         {
             image: true,

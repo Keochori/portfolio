@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: Movement Tile System, Saw Trap, Box Mechanics, Rabbit Enemy AI",
     ],
 
+    separatorWidth: "w-[805px]",
+
     tabs: [
         {
             image: true,

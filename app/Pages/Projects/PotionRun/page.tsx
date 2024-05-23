@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: Monster Mechanic, UI, Menus",
     ],
 
+    separatorWidth: "w-[400px]",
+
     tabs: [
         {
             image: true,

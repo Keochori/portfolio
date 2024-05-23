@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: Enemy Bruiser, Xp Pickup",
     ],
 
+    separatorWidth: "w-[370px]",
+
     tabs: [
         {
             image: true,

@@ -11,6 +11,8 @@ const projectProps: ProjectProps = {
         "Contributions: Player Movement, Animations",
     ],
 
+    separatorWidth: "w-[410px]",
+
     tabs: [
         {
             image: true,
