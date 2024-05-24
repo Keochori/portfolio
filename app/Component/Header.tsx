@@ -30,7 +30,11 @@ export default function Header() {
 
       {/* Header Text */}
       <h1 className="font-josefin font-normal text-4xl text-white flex justify-center items-center">
-        Mateusz Salaga
+        <Link href="/Pages/About">
+          <p className="hover:text-[#e4e4e4]">
+            Mateusz Salaga
+          </p>
+        </Link>
       </h1>
 
       <div className="flex justify-center items-center py-8">
