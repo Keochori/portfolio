@@ -420,8 +420,6 @@ function ProjectTabMobile(href : string, image : string, title : string, alt : s
     return (
       <Link href={href}>
           <div className={"w-full h-fit border-t-2 bg-opacity-5 bg-slate-100 border-[#000000] hover:bg-opacity-10 " + last}>
-  
-
 
             <div className="w-full h-full flex flex-col items-center justify-center pt-4">
               <div className="pt-2">
@@ -669,7 +667,7 @@ function TemplateMobile(props: ProjectProps) {
             {/* Header */}
             <div className="bg-slate-600 bg-opacity-10 w-full h-fit flex flex-col items-center pt-12 pb-4">
                 {/* Title */}
-                <p className="text-white font-josefin text-5xl">
+                <p className="text-white font-josefin text-5xl text-center">
                     {props.title}
                 </p>
 
