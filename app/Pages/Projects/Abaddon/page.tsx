@@ -44,7 +44,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/Abaddon/entt",
             title: "Entity Component System",
-            content: "Abaddon uses EnTT, which is an entity conponent system library for game programming. EnTT makes it possible to quickly arrange and sort through entities with specific components, creating a flexible and easy way to manage entities and the systems that are affecting them. For example, it is possible to add a Model Component to an entity, instantly giving it a working model and texture. Another example would be attaching a custom script component, making the entity run the code inside the script on initialization." ,
+            content: "Abaddon uses EnTT, which is an entity conponent system library for game programming. \n\nEnTT makes it possible to quickly arrange and sort through entities with specific components, creating a flexible and easy way to manage entities and the systems that are affecting them. For example, it is possible to add a Model Component to an entity, instantly giving it a working model and texture. Another example would be attaching a custom script component, making the entity run the code inside the script on initialization." ,
         },
         {
             image: true,
