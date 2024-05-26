@@ -271,8 +271,8 @@ function Template(props: ProjectProps) {
     const ContentTab = (image : boolean, left : boolean, url : string, title : string, content : string) => {
         if (left) {
             return (
-                <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
-                    {ContentImage(image, url, "justify-end")}
+                <div className="bg-slate-600 bg-opacity-20 w-full h-fit flex items-center">
+                    {ContentImage(image, url, "justify-end pl-2")}
                     {ContentText(title, content)}
                 </div>
             )
@@ -280,9 +280,9 @@ function Template(props: ProjectProps) {
         else 
         {
             return (
-                <div className="bg-slate-600 bg-opacity-20 w-full h-[400px] flex">
+                <div className="bg-slate-600 bg-opacity-20 w-full h-fit flex items-center">
                     {ContentText(title, content)}
-                    {ContentImage(image, url, "justify-begin")}
+                    {ContentImage(image, url, "justify-begin pr-2")}
                 </div>
             )
         }
