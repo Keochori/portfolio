@@ -7,13 +7,22 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
+import Animation from "@/app/Component/Animation"
 
 export default function AboutPage() {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1150px)' })
   if (isTabletOrMobile == true) {
-    return AboutMobile();
+    return (
+      <Animation>
+        {AboutMobile()}
+      </Animation>
+    )
   } else {
-    return About();
+    return (
+      <Animation>
+        {About()}
+      </Animation>
+    )
   }
 }
 
@@ -98,13 +107,13 @@ function About() {
 
           {/* Image box */}
           <div className="pl-8 grayscale">
-            <Image
-              className=" rounded-xl"
-              src={Portrait}
-              width={210}
-              height={100}
-              alt="Picture of the author"
-            />
+              <Image
+                className=" rounded-xl"
+                src={Portrait}
+                width={210}
+                height={100}
+                alt="Picture of the author"
+              />
           </div>
         </div>
 

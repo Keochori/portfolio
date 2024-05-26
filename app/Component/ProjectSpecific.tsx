@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 import { TfiClose } from "react-icons/tfi";
-
+import Animation from "@/app/Component/Animation"
 
 interface ProjectTabProps {
     image: boolean;
@@ -49,9 +49,17 @@ export default function Page(props: ProjectProps) {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1150px)' })
 
     if (isTabletOrMobile == true) {
-      return TemplateMobile(props);
+        return (
+            <Animation>
+              {TemplateMobile(props)}
+            </Animation>
+          )
     } else {
-      return Template(props);
+        return (
+            <Animation>
+              {Template(props)}
+            </Animation>
+          )
     }
 }
 

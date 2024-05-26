@@ -3,13 +3,22 @@ import Link from "next/link"
 import { CldImage } from 'next-cloudinary';
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
+import Animation from "@/app/Component/Animation"
 
 export default function ProjectsPage() {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
   if (isTabletOrMobile == true) {
-    return ProjectsMobile();
+    return (
+      <Animation>
+        {ProjectsMobile()}
+      </Animation>
+    )
   } else {
-    return Projects();
+    return (
+      <Animation>
+        {Projects()}
+      </Animation>
+    )
   }
 }
 
