@@ -18,7 +18,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/ProceduralGeneration/Thumbnail",
             title: "Why Procedural Generation?",
-            content: "The last assignment at The Game Assembly Vocational Education for video game programmers is a solo project of personal choice. As I was always interested in procedural generation I decided to delve deeper into the topic. For those unfamiliar, procedural generation is when data is being created using an algorithm instead of doing it manually, which I think is very interesting and cool, especially when the results can be seen visually. For that reason, I chose to procedurally generate a 3D terrain.",
+            content: "The last assignment at The Game Assembly Vocational Education for video game programmers is a solo project of personal choice. As I was always interested in procedural generation I decided to delve deeper into the topic. \n\n For those unfamiliar, procedural generation is when data is being created using an algorithm instead of doing it manually, which I think is very interesting and cool, especially when the results can be seen visually. For that reason, I chose to procedurally generate a 3D terrain.",
         },
         {
             image: true,

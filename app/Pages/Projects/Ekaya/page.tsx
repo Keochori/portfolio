@@ -19,7 +19,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/EkayaAndPebblesAHelpingHand/Intro",
             title: "What is 'Ekaya & Pebbles: A Helping Hand' ?",
-            content: "'Ekaya & Pebbles: A Helping Hand' is a third person adventurer for PC created by a group of TGA (The Game Assembly) students using their own custom engine. The story follows Ekaya, a girl who stumbles upon Pebbles, a magical creature of stone that can turn into a glove, giving the user telekinetic powers. It turns out that Pebbles is just part of a larger stone giant who has been ambushed by strange creatures. Ekaya sets out on a quest to save the giant.",
+            content: "'Ekaya & Pebbles: A Helping Hand' is a third person adventurer for PC created by a group of TGA (The Game Assembly) students using their own custom engine. \n\n The story follows Ekaya, a girl who stumbles upon Pebbles, a magical creature of stone that can turn into a glove, giving the user telekinetic powers. It turns out that Pebbles is just part of a larger stone giant who has been ambushed by strange creatures. Ekaya sets out on a quest to save the giant.",
         },
         {
             image: true,
@@ -33,14 +33,14 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/EkayaAndPebblesAHelpingHand/ShootingBruiser",
             title: "Shooting Behaviour",
-            content: "The shooting behaviour for the enemy bruiser was achieved by using our engine's animation and behaviour graph. Some problems that arose were that the bullet didn't line up with the animation and the animation transitions were sharp and too rapid. I solved this by creating a system with custom timers and states tied to variables that can be accessed by our design team, giving full customization capabilities down to the smallest detail.",
+            content: "The shooting behaviour for the enemy bruiser was achieved by using our engine's animation and behaviour graph. \n\n Some problems that arose were that the bullet didn't line up with the animation and the animation transitions were sharp and too rapid. I solved this by creating a system with custom timers and states tied to variables that can be accessed by our design team, giving full customization capabilities down to the smallest detail.",
         },
         {
             image: false,
             left: true,
             url: "Projects/EkayaAndPebblesAHelpingHand/BruiserChase",
             title: "Chasing Behaviour",
-            content: "Another behaviour of the enemy bruiser is chasing. When the player finds themselves in close enough proximity to a bruiser, he starts chasing the player. Apart from pursuing the player the Bruiser also takes obstacles into account, avoiding them and greatly preventing the chance of getting stuck while chasing. This was achieved with weighted steering behaviours, giving alot of freedom for adjustment and feel of the movement.",
+            content: "Another behaviour of the enemy bruiser is chasing. When the player finds themselves in close enough proximity to a bruiser, he starts chasing the player. \n\n Apart from pursuing the player the Bruiser also takes obstacles into account, avoiding them and greatly preventing the chance of getting stuck while chasing. This was achieved with weighted steering behaviours, giving alot of freedom for adjustment and feel of the movement.",
         },
         {
             image: false,
@@ -54,7 +54,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/EkayaAndPebblesAHelpingHand/BruiserDeath",
             title: "Xp Pickup",
-            content: "Apart from the enemy bruiser, another one of my contributions to the game was the creation and implementation of experience pickups. We took inspiration from our reference video game, 'Ratchet and Clank 2016' where experience drops behave similarly. It was challening to replicate the same behaviour, which we termined most likely used a mathematical formula, so we decided to instead create our own variation using the Phsyx API. The final result was achieved by a mix of tweaking the physical force, direction and collider activation timing.",
+            content: "Another contribution of mine to the game was the creation and implementation of experience pickups. We took inspiration from our reference video game, 'Ratchet and Clank 2016' where experience drops behave similarly. \n\n It was challening to replicate the exact same results as the reference game, which we determined most likely used a mathematical formula, so we decided to instead create our own variation using the PhsyX API. The final result which we were very satisfied with was achieved by a mix of tweaking the physical force, direction and collider activation timing.",
         },
     ],
 

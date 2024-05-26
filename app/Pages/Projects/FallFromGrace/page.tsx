@@ -26,7 +26,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/FallFromGrace/Bullets",
             title: "Bullet Pattern Generator",
-            content: "Majority of bullet patterns in-game were created using my Bullet Pattern Generator Tool that I created for this particular project. The tool has customizable values and parameters that affect the pattern in different ways. Examples of that are: speed, spread, direction, amount, sprite, sprite size and more. All settings are exported into a .json file that can later be read and used by a specific entity or entities.",
+            content: "Majority of bullet patterns in-game were created using my Bullet Pattern Generator Tool that I created for this particular project. \n\n The tool has customizable values and parameters that affect the pattern in different ways. Examples of that are: speed, spread, direction, amount, sprite, sprite size and more. All settings are exported into a .json file that can later be read and used by a specific entity or entities.",
         },
         {
             image: true,

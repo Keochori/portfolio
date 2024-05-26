@@ -23,7 +23,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/Portfolio/NT",
             title: "Why Next.js & Tailwind CSS?",
-            content: "I was first recommended Next.js by a friend. The company behind it, called Vercel, allows for an easy and free way to host your website. They also have alot of templates to choose from, which for me as an unexperienced web-developer was very useful to analyze and learn from. The reason I chose Tailwind CSS is because Next.js provides an easy way to integrate it during the creation of a new project. After working with it for a while, I was satisfied with the workflow and decided to keep using it. ",
+            content: "I was first recommended Next.js by a friend. The company behind it, called Vercel, allows for an easy and free way to host your website. They also have alot of templates to choose from, which for me as an unexperienced web-developer was very useful to analyze and learn from. \n\n The reason I chose Tailwind CSS is because Next.js provides an easy way to integrate it during the creation of a new project. After working with it for a while, I was satisfied with the workflow and decided to keep using it. ",
         },
     ],
 

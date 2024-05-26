@@ -19,7 +19,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/TheTravelings/Tents",
             title: "What is 'The Travelings' ?",
-            content: "The Travelings is a 2D Adventurer for PC created by a group of TGA (The Game Assembly) students using the TGA Engine. The story follows a caravan of nomads in the desert looking to find their way to the Oasis, an almost dreamlike place with fresh water and plenty of food. Along the way, they stumble upon obstacles and dangers, but as a brave member of the caravan you decide to help clear the path.",
+            content: "The Travelings is a 2D Adventurer for PC created by a group of TGA (The Game Assembly) students using the TGA Engine. \n\n The story follows a caravan of nomads in the desert looking to find their way to the Oasis, an almost dreamlike place with fresh water and plenty of food. Along the way, they stumble upon obstacles and dangers, but as a brave member of the caravan you decide to help clear the path.",
         },
         {
             image: true,

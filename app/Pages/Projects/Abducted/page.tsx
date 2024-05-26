@@ -33,14 +33,14 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/Abducted/Saw3",
             title: "Saw Trap",
-            content: "The Saw Trap is an obstacle that moves along a predetermined path and kills the player on collision. Whenever it reaches the end from one direction, it turns around and moves the other way, creating a loop. I created it by combining my movement tile system with a custom script for the saw. The path is determined by giving tiles a specific tag that the saw recognizes and follows using the before-mentioned saw script.",
+            content: "The Saw Trap is an obstacle that moves along a predetermined path and kills the player on collision. Whenever it reaches the end from one direction, it turns around and moves the other way, creating a loop. \n\n I achieved this result by combining my movement tile system with a custom script for the saw. The path is determined by giving tiles a specific tag that the saw recognizes and follows using the before-mentioned saw script.",
         },
         {
             image: true,
             left: true,
             url: "Projects/Abducted/Box2",
             title: "Box Mechanics",
-            content: "One of the features in Abducted is being able to move boxes, which are often part of a puzzle. Box mechanics for the game were created combining my movement tile system with a custom script, similar to the saw trap. Before a box is moved, a custom script checks what tags the target tile is associated with and acts accordingly.",
+            content: "One of the features in Abducted is being able to move boxes, which are often part of a puzzle. Box mechanics for the game were created by combining my movement tile system with a custom script, similar to the saw trap. Before a box is moved, a custom script checks what tags the target tile is associated with and acts accordingly.",
         },
         {
             image: true,

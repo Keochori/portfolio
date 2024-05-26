@@ -117,7 +117,7 @@ function ContentText(title : string, content : string) {
                 {title}
             </p>
 
-            <p className="font-josefin font-light text-2xl"> 
+            <p className="font-josefin font-light text-2xl white whitespace-pre-line text-left tracking-wide"> 
                 {content}
             </p>
         </div>
