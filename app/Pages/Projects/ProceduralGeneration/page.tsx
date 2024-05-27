@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Procedural Generation",
@@ -52,22 +53,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/BardKnight/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/ViperTrace",
-            image: "Projects/ViperTrace/Thumbnail",
-            title: "Viper Trace",
-            genre: "FPS Survival",
-            content: "Viper Trace is a First-Person-Shooter survival game created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/Portfolio",
-            image: "Projects/Portfolio/ThumbnailE",
-            title: "Portfolio",
-            genre: "Website",
-            content: "My portfolio website is programmed using Next.js, Tailwind CSS and deployed by Vercel. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.ViperTrace,
+        projectR: ProjectTabList.Portfolio,
+    }
 }
 
 export default function ProceduralGeneration() {

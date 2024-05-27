@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Ekaya & Pebbles: A Helping Hand",
@@ -67,22 +68,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/EkayaAndPebblesAHelpingHand/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/Spite",
-            image: "Projects/SpiteTheYellowPlague/Thumbnail",
-            title: "Spite: The Yellow Plague",
-            genre: "Hack 'n Slash",
-            content: "Spite: The Yellow Plague is a Hack 'n Slash created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/ViperTrace",
-            image: "Projects/ViperTrace/Thumbnail",
-            title: "Viper Trace",
-            genre: "FPS Survival",
-            content: "Viper Trace is a First-Person-Shooter survival game created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.Spite,
+        projectR: ProjectTabList.ViperTrace,
+    }
 }
 
 export default function Ekaya() {

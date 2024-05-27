@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "The Travelings",
@@ -53,22 +54,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/TheTravelings/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/FallFromGrace",
-            image: "Projects/FallFromGrace/Thumbnail",
-            title: "Fall From Grace",
-            genre: "Schmup",
-            content: "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-        {
-          link: "/Pages/Projects/BardKnight",
-          image: "Projects/BardKnight/Thumbnail",
-          title: "Bard Knight",
-          genre: "Platformer",
-          content: "Bard Knight is a platformer created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.FallFromGrace,
+        projectR: ProjectTabList.BardKnight,
+    }
 }
 
 export default function TheTravelings() {

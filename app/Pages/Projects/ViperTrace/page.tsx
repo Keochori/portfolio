@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Viper Trace",
@@ -46,22 +47,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/ViperTrace/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/Ekaya",
-            image: "Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
-            title: "Ekaya & Pebbles: A Helping Hand",
-            genre: "Third Person Adventure",
-            content: "Ekaya & Pebbles: A Helping Hand is a Third-Person adventure game created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/ProceduralGeneration",
-            image: "Projects/ProceduralGeneration/Thumbnail",
-            title: "Procedural Generation",
-            genre: "Specialization",
-            content: "For my specialization project at The Game Assembly, I chose to learn more about procedural generation. The engine I chose to work in was Unreal Engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.Ekaya,
+        projectR: ProjectTabList.ProceduralGeneration,
+    }
 }
 
 export default function ViperTrace() {

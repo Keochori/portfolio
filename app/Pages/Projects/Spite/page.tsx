@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Spite: The Yellow Plague",
@@ -60,22 +61,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/SpiteTheYellowPlague/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/BardKnight",
-            image: "Projects/BardKnight/Thumbnail",
-            title: "Bard Knight",
-            genre: "Platformer",
-            content: "Bard Knight is a platformer created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/Ekaya",
-            image: "Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
-            title: "Ekaya & Pebbles: A Helping Hand",
-            genre: "Third Person Adventure",
-            content: "Ekaya & Pebbles: A Helping Hand is a Third-Person adventure game created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.BardKnight,
+        projectR: ProjectTabList.Ekaya,
+    }
 }
 
 export default function Spite() {

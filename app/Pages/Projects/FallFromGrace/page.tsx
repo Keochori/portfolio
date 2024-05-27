@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Fall From Grace",
@@ -53,22 +54,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/FallFromGrace/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/Abducted",
-            image: "Projects/Abducted/Thumbnail",
-            title: "Abducted",
-            genre: "Puzzle",
-            content: "Abducted is a mobile puzzle game created by a group of TGA students using the Unity Game Engine. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/TheTravelings",
-            image: "Projects/TheTravelings/Thumbnail",
-            title: "The Travelings",
-            genre: "Adventure",
-            content: "The Travelings is a 2D Top-down adventure game created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.Abducted,
+        projectR: ProjectTabList.TheTravelings,
+    }
 }
 
 export default function FallFromGrace() {

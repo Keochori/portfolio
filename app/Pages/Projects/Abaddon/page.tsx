@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Abaddon",
@@ -64,22 +65,11 @@ const projectProps: ProjectProps = {
         trailer: "Projects/Abducted/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/Portfolio",
-            image: "Projects/Portfolio/ThumbnailE",
-            title: "Portfolio",
-            genre: "Website",
-            content: "My portfolio website is programmed using Next.js, Tailwind CSS and deployed by Vercel. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/PotionRun",
-            image: "Projects/PotionRun/Thumbnail",
-            title: "Potion Run",
-            genre: "Endless Runner",
-            content: "Potion Run is an endless runner created by a group of TGA students using the Unity Game Engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.Portfolio,
+        projectR: ProjectTabList.PotionRun,
+    }
+
 }
 
 export default function Abaddon() {

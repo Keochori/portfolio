@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Potion Run",
@@ -53,22 +54,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/PotionRun/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/Abaddon",
-            image: "Projects/Abaddon/Thumb",
-            title: "Abaddon",
-            genre: "3D Game Engine",
-            content: "Abaddon is my 3D Game Engine programmed using C++ and the DirectX library. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/Abducted",
-            image: "Projects/Abducted/Thumbnail",
-            title: "Abducted",
-            genre: "Puzzle",
-            content: "Abducted is a mobile puzzle game created by a group of TGA students using the Unity Game Engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.Abaddon,
+        projectR: ProjectTabList.Abducted,
+    }
 }
 
 export default function PotionRun() {

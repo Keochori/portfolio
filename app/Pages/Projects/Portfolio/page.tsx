@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Portfolio",
@@ -36,22 +37,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/FallFromGrace/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/ProceduralGeneration",
-            image: "Projects/ProceduralGeneration/Thumbnail",
-            title: "Procedural Generation",
-            genre: "Specialization",
-            content: "For my specialization project at The Game Assembly, I chose to learn more about procedural generation. The engine I chose to work in was Unreal Engine. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/Abaddon",
-            image: "Projects/Abaddon/Thumb",
-            title: "Abaddon",
-            genre: "3D Game Engine",
-            content: "Abaddon is my 3D Game Engine programmed using C++ and the DirectX library. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.ProceduralGeneration,
+        projectR: ProjectTabList.Abaddon,
+    }
 }
 
 export default function Portfolio() {

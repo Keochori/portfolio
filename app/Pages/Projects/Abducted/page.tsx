@@ -1,5 +1,6 @@
 "use client"
 import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
+import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
     title: "Abducted",
@@ -60,22 +61,10 @@ const projectProps: ProjectProps = {
         trailer: "Projects/Abducted/Trailer",
     },
 
-    projects: [
-        {
-            link: "/Pages/Projects/PotionRun",
-            image: "Projects/PotionRun/Thumbnail",
-            title: "Potion Run",
-            genre: "Endless Runner",
-            content: "Potion Run is an endless runner created by a group of TGA students using the Unity Game Engine. Click here to learn more.",
-        },
-        {
-            link: "/Pages/Projects/FallFromGrace",
-            image: "Projects/FallFromGrace/Thumbnail",
-            title: "Fall From Grace",
-            genre: "Schmup",
-            content: "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more.",
-        },
-    ]
+    projects: {
+        projectL: ProjectTabList.PotionRun,
+        projectR: ProjectTabList.FallFromGrace,
+    }
 }
 
 export default function Abducted() {

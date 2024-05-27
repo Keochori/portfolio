@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 import { TfiClose } from "react-icons/tfi";
 import Animation from "@/app/Component/Animation"
+import { ProjectTabContent } from "@/app/Component/ProjectTabs"
 
 interface ProjectTabProps {
     image: boolean;
@@ -26,11 +27,8 @@ interface ProjectTabProps {
   }
 
   interface MoreProjectsProps {
-    link: string;
-    image: string;
-    title: string;
-    genre: string;
-    content: string;
+    projectL: ProjectTabContent;
+    projectR: ProjectTabContent;
   }
 
 export interface ProjectProps {
@@ -42,7 +40,7 @@ export interface ProjectProps {
   
     tabs: ProjectTabProps[];
     gallery: ProjectGalleryProps;
-    projects: MoreProjectsProps[];
+    projects: MoreProjectsProps;
   }
 
 export default function Page(props: ProjectProps) {
@@ -63,9 +61,9 @@ export default function Page(props: ProjectProps) {
     }
 }
 
-function ProjectTab(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
+function ProjectTab(tabContent : ProjectTabContent, last : string = "", contentCSS : string = "") {
     return (
-      <Link href={href}>
+      <Link href={tabContent.link}>
         <div className={"bg-opacity-5 bg-slate-400 flex flex-row w-full h-[200px] hover:h-[210px] transition-all overflow-hidden grayscale hover:grayscale-0 hover:bg-slate-300 hover:bg-opacity-10 " + last}>
           
           {/* Image */}
@@ -73,7 +71,7 @@ function ProjectTab(href : string, image : string, title : string, alt : string,
             <CldImage
               width="300"
               height="250"
-              src={image}
+              src={tabContent.image}
               sizes="100vw"
               crop={{
                 width:"1100",
@@ -88,19 +86,19 @@ function ProjectTab(href : string, image : string, title : string, alt : string,
           <div className="w-[450px] h-full flex flex-col items-center justify-center p-8">
             <div className="">
               <h1 className="text-2xl font-josefin text-white">
-                {title}
+                {tabContent.title}
               </h1>
             </div>
               
             <div className="pb-2">
               <h2 className="text-[#979797]">
-                {alt}
+                {tabContent.alt}
               </h2>
             </div>
   
             <div className={" " + contentCSS}>
               <h2 className="text-slate-400 text-sm pl-1.5 ">
-                {content}
+                {tabContent.content}
               </h2>
             </div>
           </div>
@@ -398,15 +396,8 @@ function Template(props: ProjectProps) {
                     
                     {/* Tabs */}
                     <div className="w-full h-[250px] flex justify-center">
-                        {props.projects.map((project) => {
-                            return ProjectTab(
-                                project.link,
-                                project.image,
-                                project.title,
-                                project.genre,
-                                project.content,
-                            )
-                        })}
+                        {ProjectTab(props.projects.projectL)}
+                        {ProjectTab(props.projects.projectR)}
                     </div>
                 </div>
             </div>
@@ -416,28 +407,28 @@ function Template(props: ProjectProps) {
 
 // Mobile ---------------
 
-function ProjectTabMobile(href : string, image : string, title : string, alt : string, content : string, last : string = "", contentCSS : string = "") {
+function ProjectTabMobile(tabContent : ProjectTabContent, last : string = "", contentCSS : string = "") {
     return (
-      <Link href={href}>
+      <Link href={tabContent.link}>
           <div className={"w-full h-fit border-t-2 bg-opacity-5 bg-slate-100 border-[#000000] hover:bg-opacity-10 " + last}>
 
             <div className="w-full h-full flex flex-col items-center justify-center pt-4">
               <div className="pt-2">
                 <p className="text-2xl font-josefin text-white text-center">
-                  {title}
+                  {tabContent.title}
                 </p>
               </div>
   
               <div className="pb-2">
                 <p className="text-[#979797]">
-                  {alt}
+                  {tabContent.alt}
                 </p>
               </div>
             </div>
   
             <div className="w-full h-full flex justify-center p-4 pt-0">
               <p className="text-slate-400 text-sm text-center">
-                {content}
+                {tabContent.content}
               </p>
             </div>
   
@@ -445,7 +436,7 @@ function ProjectTabMobile(href : string, image : string, title : string, alt : s
               <CldImage className="border border-opacity-15 border-white"
                 width="500"
                 height="260"
-                src={image}
+                src={tabContent.image}
                 sizes="100vw"
                 crop={{
                   width:"1100",
@@ -731,15 +722,8 @@ function TemplateMobile(props: ProjectProps) {
 
                     {/* Tabs */}
                     <div className="w-full h-fit justify-center">
-                    {props.projects.map((project) => {
-                            return ProjectTabMobile(
-                                project.link,
-                                project.image,
-                                project.title,
-                                project.genre,
-                                project.content,
-                            )
-                        })}
+                        {ProjectTabMobile(props.projects.projectL)}
+                        {ProjectTabMobile(props.projects.projectR)}
                     </div>
 
                 </div>
