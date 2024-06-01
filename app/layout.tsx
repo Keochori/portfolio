@@ -7,6 +7,16 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Test",
   description: "1",
+  openGraph: {
+    type: "website",
+    url: "https://example.com",
+    title: "My Website",
+    description: "My Website Description",
+    siteName: "My Website",
+    images: [{
+      url: "https://example.com/og.png",
+    }],
+  }
 };
 
 export default function RootLayout({
