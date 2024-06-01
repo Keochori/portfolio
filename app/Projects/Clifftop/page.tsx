@@ -7,9 +7,10 @@ const projectProps: ProjectProps = {
     genre: "Point and Click",
     
     details: [
+        "Contributions: Gameplay, Debugging, Tools, UI"
     ],
 
-    separatorWidth: "w-[160px]",
+    separatorWidth: "w-[450px]",
 
     tabs: [
         {
