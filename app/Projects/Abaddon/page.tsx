@@ -24,7 +24,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/Abaddon/golem",
             title: "3D Models",
-            content: "Abaddon supports loading in 3D models using the widely popular Open Asset Import Library (assimp). The Assimp library supports many formats, which is one of the reason I chose to use it, but also because it is easy to integrate and has alot of documentation.",
+            content: "Abaddon supports loading in 3D models using the widely popular Open Asset Import Library (assimp). The Assimp library supports many formats, which is one of the reasons I chose to use it, but also because it is easy to integrate and has alot of documentation.",
         },
         {
             image: true,
@@ -52,7 +52,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/Abaddon/imgui",
             title: "Graphical User Interface",
-            content: "For graphical user interface, Abaddon uses the widely popular ImGui library. ImGui has many useful features for game and engine development, such as window docking and optimized vertex buffers for rendering. The library is fast, easy to use and comes with alot of documentation thanks to its popularity. ",
+            content: "For graphical user interface, Abaddon uses the widely popular ImGui library. ImGui has many useful features for game and engine development, such as window docking and optimized vertex buffers for rendering. Apart from that, the library is fast, easy to use and comes with alot of documentation and tutorials, which is why I chose to work with it.",
         },
     ],
     
