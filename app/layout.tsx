@@ -5,8 +5,8 @@ import Header from "./Component/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Test",
-  description: "1",
+  title: "Test3",
+  description: "3",
   openGraph: {
     type: "website",
     url: "https://example.com",
@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     images: [{
       url: "https://example.com/og.png",
     }],
-  }
+  },
+  icons: "https://example.com/icon.png",
 };
 
 export default function RootLayout({
