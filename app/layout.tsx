@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mateusz Salaga's Portfolio",
-  description: "1",
+  description: "Mateusz Salaga's Portfolio",
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
 
