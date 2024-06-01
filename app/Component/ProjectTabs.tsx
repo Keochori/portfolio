@@ -78,7 +78,7 @@ export default class List{
         image: "Projects/TheTravelings/Thumbnail",
         title: "The Travelings",
         alt: "Adventure",
-        content: "The Travelings is a 2D Top-down adventure game created by a group of TGA students using their own custom game engine. Click here to learn more.",
+        content: "The Travelings is a 2D Top-down adventure game created by a group of TGA students using the TGA engine. Click here to learn more.",
     };
 
     static FallFromGrace: ProjectTabContent = {
@@ -86,7 +86,7 @@ export default class List{
         image: "Projects/FallFromGrace/Thumbnail",
         title: "Fall From Grace",
         alt: "Schmup",
-        content: "Fall From Grace is a schmup created by a group of TGA students using their own custom game engine. Click here to learn more.",
+        content: "Fall From Grace is a schmup created by a group of TGA students using the TGA Engine. Click here to learn more.",
     };
 
     static Abducted: ProjectTabContent = {

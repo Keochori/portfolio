@@ -34,7 +34,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/PotionRun/UI",
             title: "User Interface",
-            content: "Implementing user interface for the game is another one of my contributions. That includes a timer, a healtbar and a points counter.",
+            content: "Implementing user interface for the game is another one of my contributions. That includes a timer, a healtbar and a point counter.",
         },
         {
             image: true,
