@@ -41,7 +41,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/Abducted/Box2",
             title: "Box Mechanics",
-            content: "One of the features in Abducted is being able to move boxes, which are often part of a puzzle. I was able to create the box mechanics by combining my movement tile system with a custom script, similar to the saw trap. Before a box is moved, a custom script checks what tags the target tile is associated with and acts accordingly.",
+            content: "One of the features in Abducted is being able to move boxes, which are often part of a puzzle. I was able to create the box mechanic by combining my movement tile system with a custom script, similar to the saw trap. Before a box is moved, a custom script checks what tags the target tile is associated with and acts accordingly.",
         },
         {
             image: true,
