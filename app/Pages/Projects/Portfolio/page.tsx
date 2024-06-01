@@ -38,7 +38,7 @@ const projectProps: ProjectProps = {
     },
 
     projects: {
-        projectL: ProjectTabList.ProceduralGeneration,
+        projectL: ProjectTabList.Clifftop,
         projectR: ProjectTabList.Abaddon,
     }
 }

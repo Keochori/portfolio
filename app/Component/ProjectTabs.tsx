@@ -25,6 +25,14 @@ export default class List{
         content: "My portfolio website is programmed using Next.js, Tailwind CSS and deployed by Vercel. Click here to learn more.",
     };
 
+    static Clifftop: ProjectTabContent = {
+        link: "/Pages/Projects/Clifftop",
+        image: "Projects/Clifftop/Thumbnail",
+        title: "Project III",
+        alt: "Point and Click",
+        content: "Project III is an unreleased pixel art point and click made in Unity that I worked on during my internship. Click here to learn more.",
+    };
+
     static ProceduralGeneration: ProjectTabContent = {
         link: "/Pages/Projects/ProceduralGeneration",
         image: "Projects/ProceduralGeneration/Thumbnail",

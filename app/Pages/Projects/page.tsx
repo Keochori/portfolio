@@ -85,6 +85,14 @@ function Projects() {
           {/* Portfolio */}
           {Tab(ProjectTabList.Portfolio, "border-b", "pl-1")}
 
+          {/* Internship */}
+          <h1 className="font-josefin text-white text-2xl pb-3 pt-14 underline flex justify-center">
+            Internship:
+          </h1>
+
+          {/* Project III */}
+          {Tab(ProjectTabList.Clifftop, "border-b", "pl-1")}
+
           {/* TGA */}
           <h1 className="underline font-josefin text-white text-2xl pb-3 pt-14 flex justify-center">
             The Game Assembly [Higher Vocational Education]:

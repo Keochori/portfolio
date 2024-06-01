@@ -55,7 +55,7 @@ const projectProps: ProjectProps = {
 
     projects: {
         projectL: ProjectTabList.ViperTrace,
-        projectR: ProjectTabList.Portfolio,
+        projectR: ProjectTabList.Clifftop,
     }
 }
 
