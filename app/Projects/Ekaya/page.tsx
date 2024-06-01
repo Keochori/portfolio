@@ -27,7 +27,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/EkayaAndPebblesAHelpingHand/BruiserEnemy",
             title: "Bruiser Enemy",
-            content: "My main contribution for this project was working on the Bruiser Enemy, implementing his shooting, chasing, attack and death behaviour. I also implemented animations for the bruiser, as well as his xp drop mechanic.",
+            content: "My main contribution for this project was working on the Bruiser Enemy, implementing his shooting, chasing, attack and death behaviour. I also implemented his animations and xp drop mechanic.",
         },
         {
             image: false,
@@ -55,7 +55,7 @@ const projectProps: ProjectProps = {
             left: true,
             url: "Projects/EkayaAndPebblesAHelpingHand/BruiserDeath",
             title: "Xp Pickup",
-            content: "Another contribution of mine to the game was the creation and implementation of experience pickups. We took inspiration from our reference video game, 'Ratchet and Clank 2016' where experience drops behave similarly. \n\n It was challening to replicate the exact same results as the reference game, which we determined most likely used a mathematical formula, so we decided to instead create our own variation using the PhsyX API. The final result which we were very satisfied with was achieved by a mix of tweaking the physical force, direction and collider activation timing.",
+            content: "Another contribution of mine to the game was the creation and implementation of experience pickups. We took inspiration from our reference video game, 'Ratchet and Clank 2016' where experience drops behave similarly. \n\n It was challening to replicate results from the reference game, which we determined most likely used a mathematical formula, so we decided to instead create our own variation using the PhsyX API. The final result which we were very satisfied with was achieved by a mix of tweaking the physical force, direction and collider activation timing.",
         },
     ],
 
