@@ -34,7 +34,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/SpiteTheYellowPlague/Ability",
             title: "Audio",
-            content: "Another one of my contributions was helping find and implement sounds into the game, as well as learn and work with FMOD to achieve surround sound.",
+            content: "I was part of helping to find and implement sounds into the game, as well as learning to work with FMOD to achieve surround sound.",
         },
         {
             image: true,
