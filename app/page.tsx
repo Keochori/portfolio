@@ -116,7 +116,7 @@ function About() {
           <div className="w-[546px] h-[50px] grid grid-cols-3">
             {Tab("border-r-2 border-[#080f1a] rounded-l-xl", IconType.LinkedIn, "https://www.linkedin.com/in/mateuszsalaga/")}
             {Tab("",                                         IconType.Github, "https://github.com/Keochori")}
-            {Tab("border-l-2 border-[#080f1a] rounded-r-xl", IconType.CV, "/cv.pdf")}
+            {Tab("border-l-2 border-[#080f1a] rounded-r-xl", IconType.CV, "/CV.pdf")}
           </div>
           
           {/* Mail Tab */}
