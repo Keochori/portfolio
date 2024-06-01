@@ -7,7 +7,8 @@ const projectProps: ProjectProps = {
     genre: "Point and Click",
     
     details: [
-        "Contributions: Gameplay, Debugging, Tools, UI"
+        "Engine: Unity",
+        "Contributions: Gameplay, Debugging, Tools, UI",
     ],
 
     separatorWidth: "w-[450px]",
