@@ -383,7 +383,7 @@ function Template(props: ProjectProps) {
 
                                 <div className="w-full h-[30px] text-center pt-2">
                                     <div className="w-full h-[20px]">
-                                        <Link href="/Pages/Projects">
+                                        <Link href="/Projects">
                                             <p className="font-josefin text-xl text-[#3b65b3] underline hover:text-[#324672] transition-all">
                                                 {"Or back to project list!"}
                                             </p>
@@ -710,7 +710,7 @@ function TemplateMobile(props: ProjectProps) {
 
                             <div className="w-full h-[30px] text-center pt-2">
                                 <div className="w-full h-[20px]">
-                                    <Link href="/Pages/Projects">
+                                    <Link href="/Projects">
                                         <p className="font-josefin text-xl text-[#3b65b3] underline hover:text-[#324672] transition-all">
                                             {"Or back to project list!"}
                                         </p>

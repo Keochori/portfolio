@@ -90,7 +90,7 @@ function About() {
             <div className="flex justify-center">
               <Link
                 className="bg-[#131a25] transition-all font-josefin text-slate-300 text-xl border-2 border-[#1e293b] rounded-xl p-2 pl-8 pr-8 hover:text-black hover:bg-white hover:border-[#1e293b]"
-                href="../Pages/Projects"
+                href="/Projects"
               >
                 Projects
               </Link>
@@ -168,7 +168,7 @@ function AboutMobile() {
             <div className="flex justify-center">
               <Link
                 className="bg-[#131a25] transition-all font-josefin text-slate-300 text-xl border-2 border-[#1e293b] rounded-xl p-2 pl-8 pr-8 hover:text-black hover:bg-white hover:border-[#1e293b]"
-                href="../Pages/Projects"
+                href="/Projects"
               >
                 Projects
               </Link>
@@ -193,7 +193,7 @@ function AboutMobile() {
 
         {/* CV */}
         <div className="h-[90px]">
-          {Tab("border-t-2 border-[#080f1a]", IconType.CV, "/cv.pdf", "[&&]:text-4xl")}
+          {Tab("border-t-2 border-[#080f1a]", IconType.CV, "/CV.pdf", "[&&]:text-4xl")}
         </div>
 
         {/* Email */}
