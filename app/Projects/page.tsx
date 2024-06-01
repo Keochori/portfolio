@@ -192,8 +192,16 @@ function ProjectsMobile() {
           {/* Portfolio */}
           {TabMobile(ProjectTabList.Portfolio, "border-b-2", "pl-1")}
 
+          {/* Internship */}
+          <h1 className="font-josefin text-white text-2xl pb-3 pt-14 underline flex justify-center">
+            Internship:
+          </h1>
+
+          {/* Project III */}
+          {TabMobile(ProjectTabList.Clifftop, "border-b-2", "pl-1")}
+
           {/* TGA */}
-          <h1 className="underline font-josefin text-white text-2xl pb-3 pt-14 flex justify-center">
+          <h1 className="underline font-josefin text-white text-2xl pb-3 pt-14 flex justify-center text-center">
             The Game Assembly [Higher Vocational Education]:
           </h1>
           
