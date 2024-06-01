@@ -10,7 +10,7 @@ export interface ProjectTabContent {
 
 export default class List{
     static Abaddon: ProjectTabContent = {
-        link: "/Pages/Projects/Abaddon",
+        link: "/Projects/Abaddon",
         image: "Projects/Abaddon/Thumb",
         title: "Abaddon",
         alt: "3D Game Engine",
@@ -18,7 +18,7 @@ export default class List{
     };
 
     static Portfolio: ProjectTabContent = {
-        link: "/Pages/Projects/Portfolio",
+        link: "/Projects/Portfolio",
         image: "Projects/Portfolio/ThumbnailE",
         title: "Portfolio",
         alt: "Website",
@@ -26,7 +26,7 @@ export default class List{
     };
 
     static Clifftop: ProjectTabContent = {
-        link: "/Pages/Projects/Clifftop",
+        link: "/Projects/Clifftop",
         image: "Projects/Clifftop/Thumbnail",
         title: "Project III",
         alt: "Point and Click",
@@ -34,7 +34,7 @@ export default class List{
     };
 
     static ProceduralGeneration: ProjectTabContent = {
-        link: "/Pages/Projects/ProceduralGeneration",
+        link: "/Projects/ProceduralGeneration",
         image: "Projects/ProceduralGeneration/Thumbnail",
         title: "Procedural Generation",
         alt: "Specialization",
@@ -42,7 +42,7 @@ export default class List{
     };
 
     static ViperTrace: ProjectTabContent = {
-        link: "/Pages/Projects/ViperTrace",
+        link: "/Projects/ViperTrace",
         image: "Projects/ViperTrace/Thumbnail",
         title: "Viper Trace",
         alt: "FPS Survival",
@@ -50,7 +50,7 @@ export default class List{
     };
 
     static Ekaya: ProjectTabContent = {
-        link: "/Pages/Projects/Ekaya",
+        link: "/Projects/Ekaya",
         image: "Projects/EkayaAndPebblesAHelpingHand/Thumbnail",
         title: "Ekaya & Pebbles: A Helping Hand",
         alt: "Third Person Adventure",
@@ -58,7 +58,7 @@ export default class List{
     };
 
     static Spite: ProjectTabContent = {
-        link: "/Pages/Projects/Spite",
+        link: "/Projects/Spite",
         image: "Projects/SpiteTheYellowPlague/Thumbnail",
         title: "Spite: The Yellow Plague",
         alt: "Hack 'n Slash",
@@ -66,7 +66,7 @@ export default class List{
     };
 
     static BardKnight: ProjectTabContent = {
-        link: "/Pages/Projects/BardKnight",
+        link: "/Projects/BardKnight",
         image: "Projects/BardKnight/Thumbnail",
         title: "Bard Knight",
         alt: "Platformer",
@@ -74,7 +74,7 @@ export default class List{
     };
 
     static TheTravelings: ProjectTabContent = {
-        link: "/Pages/Projects/TheTravelings",
+        link: "/Projects/TheTravelings",
         image: "Projects/TheTravelings/Thumbnail",
         title: "The Travelings",
         alt: "Adventure",
@@ -82,7 +82,7 @@ export default class List{
     };
 
     static FallFromGrace: ProjectTabContent = {
-        link: "/Pages/Projects/FallFromGrace",
+        link: "/Projects/FallFromGrace",
         image: "Projects/FallFromGrace/Thumbnail",
         title: "Fall From Grace",
         alt: "Schmup",
@@ -90,7 +90,7 @@ export default class List{
     };
 
     static Abducted: ProjectTabContent = {
-        link: "/Pages/Projects/Abducted",
+        link: "/Projects/Abducted",
         image: "Projects/Abducted/Thumbnail",
         title: "Abducted",
         alt: "Puzzle",
@@ -98,7 +98,7 @@ export default class List{
     };
 
     static PotionRun: ProjectTabContent = {
-        link: "/Pages/Projects/PotionRun",
+        link: "/Projects/PotionRun",
         image: "Projects/PotionRun/Thumbnail",
         title: "Potion Run",
         alt: "Endless Runner",

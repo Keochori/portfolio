@@ -3,10 +3,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function GetProjectsButton() {
-  const clicked = <Link href="/Pages/Projects" className="underline underline-offset-2 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
-  const unclicked = <Link href="/Pages/Projects" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
+  const clicked = <Link href="/Projects" className="underline underline-offset-2 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
+  const unclicked = <Link href="/Projects" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">Projects</Link>
 
-  if (usePathname() == ('/Pages/Projects')) {
+  if (usePathname() == ('/Projects')) {
     return clicked;
   } else {
     return unclicked;
@@ -14,10 +14,10 @@ function GetProjectsButton() {
 }
 
 function GetAboutButton() {
-  const clicked = <Link href="/Pages/About" className="underline underline-offset-2 brightness-100 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
-  const unclicked = <Link href="/Pages/About" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
+  const clicked = <Link href="/" className="underline underline-offset-2 brightness-100 text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
+  const unclicked = <Link href="/" className="text-xl px-7 text-[#ffffff] font-josefin font-light hover:text-[#b6b6b6] hover:tracking-wider transition-all">About</Link>
 
-  if (usePathname() == ('/Pages/About')) {
+  if (usePathname() == ('/')) {
     return clicked;
   } else {
     return unclicked;
@@ -30,7 +30,7 @@ export default function Header() {
 
       {/* Header Text */}
       <h1 className="font-josefin font-normal text-4xl text-white flex justify-center items-center">
-        <Link href="/Pages/About">
+        <Link href="/">
           <p className="hover:text-[#e4e4e4]">
             Mateusz Salaga
           </p>
