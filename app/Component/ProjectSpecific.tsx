@@ -606,6 +606,7 @@ function TemplateMobile(props: ProjectProps) {
                             height={1080}
                             controls={true}
                             src={url}
+                            logo={false}
                         />
                     </div>
                 </div>
