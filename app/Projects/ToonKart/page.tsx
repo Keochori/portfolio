@@ -59,7 +59,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/ToonKart/uiVid",
             title: "Menus & User Interface",
-            content: "All menus and user interface for Toon Kart was made using Unreal Engines' Widget Blueprint tool. The game includes a Kart Select Menu, How To Play Menu, Settings Menu, In-Game Pause Menu, Win-screen Menu and a In-Game User Interface. The In-Game User Interface includes a drift boost bar, current laps indicator, current placement text and a minimap with realtime kart positions.",
+            content: "All menus and user interface for Toon Kart was made using Unreal Engines' Widget Blueprint tool. The game includes a Kart Select Menu, How To Play Menu, Settings Menu, In-Game Pause Menu, Win-screen Menu and a In-Game User Interface. The In-Game User Interface includes a drift boost bar, current laps indicator, current placement text and a minimap with realtime kart positions.\n\nToon Karts minimap is displayed using Unreal Engines' Widget Blueprint Tool, but is created using a Scene Capture 2D Component and sprites visible only to that component.",
         },
         {
             image: true,
