@@ -79,6 +79,9 @@ function Projects() {
             Personal:
           </h1>
 
+          {/* Toon Kart */}
+          {Tab(ProjectTabList.ToonKart)}
+          
           {/* Abaddon */}
           {Tab(ProjectTabList.Abaddon)}
 
@@ -185,6 +188,9 @@ function ProjectsMobile() {
           <h1 className="font-josefin text-white text-2xl pb-3 underline flex justify-center">
             Personal:
           </h1>
+
+          {/* Toon Kart */}
+          {TabMobile(ProjectTabList.ToonKart)}
 
           {/* Abaddon */}
           {TabMobile(ProjectTabList.Abaddon)}

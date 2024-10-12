@@ -9,6 +9,14 @@ export interface ProjectTabContent {
 }
 
 export default class List{
+    static ToonKart: ProjectTabContent = {
+        link: "/Projects/ToonKart",
+        image: "Projects/ToonKart/Thumbnail",
+        title: "Toon Kart",
+        alt: "Kart Racer",
+        content: "Toon Kart is a 3D Kart Racer I developed using Unreal Engine 5. Click here to learn more.",
+    };
+
     static Abaddon: ProjectTabContent = {
         link: "/Projects/Abaddon",
         image: "Projects/Abaddon/Thumb",
