@@ -36,9 +36,9 @@ export default class List{
     static Clifftop: ProjectTabContent = {
         link: "/Projects/Clifftop",
         image: "Projects/Clifftop/Thumbnail",
-        title: "Project III",
+        title: "Kathy Rain 2: Soothsayer",
         alt: "Point and Click",
-        content: "Project III is an unreleased pixel art point and click made in Unity that I worked on during my internship. Click here to learn more.",
+        content: "'Kathy Rain 2: Soothsayer' is an unreleased pixel art point and click made in Unity that I worked on during my internship. Click here to learn more.",
     };
 
     static ProceduralGeneration: ProjectTabContent = {
