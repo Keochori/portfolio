@@ -3,7 +3,7 @@ import ProjectSpecific, { ProjectProps } from "@/app/Component/ProjectSpecific"
 import ProjectTabList from "@/app/Component/ProjectTabs"
 
 const projectProps: ProjectProps = { 
-    title: "Project III",
+    title: "Kathy Rain 2: Soothsayer",
     genre: "Point and Click",
     
     details: [
@@ -19,7 +19,7 @@ const projectProps: ProjectProps = {
             left: false,
             url: "Projects/Clifftop/Intro",
             title: "What's Project III?",
-            content: "Project III is an unreleased pixel art point and click game made in Unity that I worked on during my internship between August 2023 and April 2024.",
+            content: "Kathy Rain 2: Soothsayer is an unreleased pixel art point and click game made in Unity that I worked on during my internship between August 2023 and April 2024.",
         },
     ],
 
